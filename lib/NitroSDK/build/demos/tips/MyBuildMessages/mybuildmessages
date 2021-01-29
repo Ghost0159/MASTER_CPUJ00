@@ -1,0 +1,43 @@
+#! make -f
+#----------------------------------------------------------------------------
+# Project:  NitroSDK - Demo - BuildMessage
+# File:	    mybuildmessages
+#
+# Copyright 2003-2005 Nintendo.	 All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: mybuildmessages,v $
+# Revision 1.2  2005/08/08 00:46:09  yasu
+# precomiple header ‚ÌƒRƒ“ƒpƒCƒ‹‚Ö‚Ì‘Î‰ž
+#
+# Revision 1.1  2004/12/27 04:48:00  yasu
+# Add MyBuildMessages
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+
+MSG_COMPILE		= echo compiling  $< &&
+MSG_LINK		= echo linking    $@ &&
+MSG_MAKEROM		= echo making rom $@ &&
+ 
+#
+# Show my compiling message with -s option 
+#
+ifeq (,$(findstring s,$(MAKEFLAGS_SHORT)))
+ifeq ($(MAKECMDGOALS),do-build)
+MAKEFLAGS		+= -s
+override CC		= $(MSG_COMPILE) $(MWCC)
+override CXX		= $(MSG_COMPILE) $(MWCC)
+override AS		= $(MSG_COMPILE) $(MWAS)
+override LD		= $(MSG_LINK)    $(MWLD)
+override AR		= $(MSG_LINK)    $(MWAR)
+override MAKEROM	= $(MSG_MAKEROM) $(NITRO_TOOLSDIR)/bin/makerom.exe
+endif
+endif
+
+#===== End of mybuildmessages =====

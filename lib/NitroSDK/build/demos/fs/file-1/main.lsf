@@ -1,0 +1,86 @@
+#----------------------------------------------------------------------------
+# Project:  NitroSDK - FS - demos - file-1
+# File:     main.lsf
+#
+# Copyright 2003,2004 Nintendo.  All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: main.lsf,v $
+# Revision 1.11  2004/09/08 12:25:38  yasu
+# switch main address by TEG/TS setting
+#
+# Revision 1.10  2004/09/04 02:47:35  yosizaki
+# change to use default component(mongoose).
+#
+# Revision 1.9  2004/07/26 08:11:08  yasu
+# Rename ADDRESS_ARM7 -> ADDRESS_DTCM
+#
+# Revision 1.8  2004/07/26 05:36:03  yasu
+# Using $(ADDRESS_ARM7) for DTCM start address
+#
+# Revision 1.7  2004/07/10 04:15:55  yasu
+# Add $(OBJDIR) to object files
+#
+# Revision 1.6  2004/07/05 05:42:29  yada
+# add ITCM and DTCM autoload section
+#
+# Revision 1.5  2004/06/28 11:20:13  yasu
+# Exchange GROUP(STATIC) to $(OBJS_STATIC)
+#
+# Revision 1.4  2004/04/14 10:26:46  yasu
+# delete group LIBRARIES
+#
+# Revision 1.3  2004/04/13 12:08:41  yosizaki
+# fix header comment.
+#
+# Revision 1.2  2004/02/05 07:09:02  yasu
+# change SDK prefix iris -> nitro
+#
+# Revision 1.1  2004/01/15 07:32:17  yasu
+# Test for ROM Image construction
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+#
+#  Nitro LCF SPEC FILE
+#
+
+Static main
+{
+	Address		$(ADDRESS_MAIN)
+	Object		$(OBJS_STATIC)
+	Library		$(LLIBS) $(GLIBS) $(CW_LIBS)
+	Object		GROUP(ROOT)
+}
+
+Overlay main_overlay_0
+{
+	After		main
+	Object		$(OBJDIR)/boo.o
+	Object		GROUP(main_overlay_0)
+}
+
+Overlay main_overlay_1
+{
+	After		main_overlay_0
+	Object		$(OBJDIR)/foo.o \
+			$(OBJDIR)/woo.o
+	Object		GROUP(main_overlay_1)
+}
+
+Autoload ITCM
+{
+	Address		0x01ff8000
+	Object		* (.itcm)
+}
+
+Autoload DTCM
+{
+	Address		$(ADDRESS_DTCM)
+	Object		* (.dtcm)
+}

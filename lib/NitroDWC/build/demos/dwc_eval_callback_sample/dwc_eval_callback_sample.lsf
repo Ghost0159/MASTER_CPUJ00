@@ -1,0 +1,40 @@
+#----------------------------------------------------------------------------
+# Project:  NitroInet - include
+# File:     ARM9-TS.lsf
+#
+# Copyright 2003-2005 Nintendo.  All rights reserved.
+#
+# These coded insructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+#----------------------------------------------------------------------------
+#
+#  Nitro LCF SPEC FILE
+# LCFILE_SPEC	=	./$(NITRO_LIBARCH)-inet.lsf
+#
+
+Static $(TARGET_NAME)
+{
+	Address		0x02000000
+	Object		$(OBJS_STATIC)
+	Library		$(LLIBS) $(GLIBS) $(CW_LIBS)
+	StackSize	0 4096
+}
+
+Autoload ITCM
+{
+	Address		0x01ff8000
+	Object		*     		 (.itcm)
+	Object		$(OBJS_AUTOLOAD) (.text)
+}
+
+Autoload DTCM
+{
+	Address		0x027c0000
+	Object		*     		 (.dtcm)
+	Object		$(OBJS_AUTOLOAD) (.data)
+	Object		$(OBJS_AUTOLOAD) (.bss)
+}

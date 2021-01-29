@@ -1,0 +1,18 @@
+/*
+	precompiled header for NITRO C target
+*/
+/* include precompiled header for C source */
+
+#ifdef	SDK_DEBUG
+	#pragma precompile_target "Nitro_TS_Debug.mch"
+#elif		SDK_RELEASE
+	#pragma precompile_target "Nitro_TS_Release.mch"
+#elif		SDK_FINALROM
+	#pragma precompile_target "Nitro_TS_ROM.mch"
+#else
+	#error("no SDK_ define")
+#endif
+
+/* include header for NITRO */
+#include <nitro_TS_prefix.h>
+#include <nitro.h>

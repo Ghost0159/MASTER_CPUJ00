@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<ima version="1.4.0">
+
+<head>
+	<create user="kitani_toshikazu" host="KITANIT-WIN" date="2004-08-03T14:55:40" source="ima_alpha.mb"/>
+	<title>Material Color Animation Data for NINTENDO NITRO-System</title>
+	<generator name="Maya 5.0.1 NNS_Export" version="1.4.0"/>
+</head>
+
+<body>
+
+<mat_color_info
+	frame_size="200"
+	tool_start_frame="1"
+	tool_end_frame="200"
+	interpolation="linear"
+	interp_end_to_start="off"
+	compress_material="off" material_size="4 4"
+	frame_step_mode="auto"
+	tolerance_color="2"
+/>
+
+<mat_color_data size="108">
+	0 31 31 31 31 31 31 31 31 31
+	31 30 30 28 27 25 24 22 19 17
+	15 12 10 8 6 3 1 0 0 0
+	0 0 0 0 0 0 0 0 0 0
+	0 0 0 0 0 0 0 0 0 0
+	0 0 0 0 0 0 0 0 0 0
+	0 0 0 0 0 0 0 0 0 0
+	0 0 0 0 0 0 0 0 0 0
+	0 2 4 7 9 11 14 16 18 20
+	23 25 26 28 29 30 31 31 31 31
+	31 31 31 31 31 31 31 31 
+</mat_color_data>
+
+<mat_color_anm_array size="2">
+	<mat_color_anm index="0" material_name="lambert3">
+		<diffuse_r frame_step="1" data_size="1" data_head="0"/>
+		<diffuse_g frame_step="1" data_size="1" data_head="1"/>
+		<diffuse_b frame_step="1" data_size="1" data_head="0"/>
+		<ambient_r frame_step="1" data_size="1" data_head="0"/>
+		<ambient_g frame_step="1" data_size="1" data_head="0"/>
+		<ambient_b frame_step="1" data_size="1" data_head="0"/>
+		<specular_r frame_step="1" data_size="1" data_head="0"/>
+		<specular_g frame_step="1" data_size="1" data_head="0"/>
+		<specular_b frame_step="1" data_size="1" data_head="0"/>
+		<emission_r frame_step="1" data_size="1" data_head="0"/>
+		<emission_g frame_step="1" data_size="1" data_head="0"/>
+		<emission_b frame_step="1" data_size="1" data_head="0"/>
+		<polygon_alpha frame_step="4" data_size="53" data_head="2"/>
+	</mat_color_anm>
+	<mat_color_anm index="1" material_name="lambert5">
+		<diffuse_r frame_step="1" data_size="1" data_head="11"/>
+		<diffuse_g frame_step="1" data_size="1" data_head="1"/>
+		<diffuse_b frame_step="1" data_size="1" data_head="0"/>
+		<ambient_r frame_step="1" data_size="1" data_head="0"/>
+		<ambient_g frame_step="1" data_size="1" data_head="0"/>
+		<ambient_b frame_step="1" data_size="1" data_head="0"/>
+		<specular_r frame_step="1" data_size="1" data_head="0"/>
+		<specular_g frame_step="1" data_size="1" data_head="0"/>
+		<specular_b frame_step="1" data_size="1" data_head="0"/>
+		<emission_r frame_step="1" data_size="1" data_head="0"/>
+		<emission_g frame_step="1" data_size="1" data_head="0"/>
+		<emission_b frame_step="1" data_size="1" data_head="0"/>
+		<polygon_alpha frame_step="4" data_size="53" data_head="55"/>
+	</mat_color_anm>
+</mat_color_anm_array>
+
+</body>
+
+</ima>

@@ -1,0 +1,282 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	SeqArc for Sample SE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#include <sound_data.sbdl>
+
+@SEQ_TABLE	
+
+SE_YOSHI:           yoshi,          BANK_SE, 127, 96, 64, PLAYER_VOICE
+SE_WIHAHO:          wihaho,         BANK_SE, 127, 96, 64, PLAYER_VOICE
+SE_COIN: 			note_only,		BANK_SE,  65, 96, 64, PLAYER_SE
+SE_AMBULANCE: 		jump_seq,		BANK_SE,  55, 96, 64, PLAYER_SE
+SE_REPEAT:			loop_seq,		BANK_SE,  55, 96, 64, PLAYER_SE
+SE_PATTERN:			call_seq,		BANK_SE,  55, 96, 64, PLAYER_SE
+SE_PORTAMENT:		porta_seq,  	BANK_SE,  65, 96, 64, PLAYER_SE
+SE_PORTAMENT2:		porta_time_seq, BANK_SE,  65, 96, 64, PLAYER_SE
+SE_SWEEP:			sweep_seq, 		BANK_SE,  65, 96, 64, PLAYER_SE
+SE_VIBRATE:			mod_seq,   		BANK_SE,  65, 96, 64, PLAYER_SE
+SE_VIBRATE2:		tie_seq,   		BANK_SE,  65, 96, 64, PLAYER_SE
+SE_SUPER_MARIO:		waitoff_seq,   	BANK_SE,  65, 96, 64, PLAYER_SE
+SE_SUPER_MARIO2:	opentrack_seq,	BANK_SE,  65, 96, 64, PLAYER_SE
+
+
+@SEQ_DATA
+
+yoshi:
+    prg 0
+    cn4 127, 0
+    fin
+    
+wihaho:
+    prg 1
+    cn4 127, 0
+    fin
+    
+; ノートコマンドだけ
+; コイン音
+note_only:
+	prg 2
+	as5 127, 6
+	ds6 127, 48
+	fin
+	
+
+; ジャンプによるループ（無限の繰り返し）
+; 救急車
+jump_seq:
+	prg 3
+_loop_start:
+	bn4 127, 48
+	gn4 127, 48
+	jump _loop_start
+	
+
+; ループを使った繰り返し再生
+; 単純に６回繰り返す
+loop_seq:
+	prg 2
+    loop_start 6
+      cn5 127,10
+	  gn4 127,10
+    loop_end
+	fin
+
+
+; コールを使ったパターン再生
+; 同じフレーズをパターン化し、パンを設定してそれぞれ同じフレーズを鳴らす。
+call_seq:
+	prg 2
+	pan 0
+	call _pattern
+	pan 64
+	call _pattern
+	pan 127
+	call _pattern
+	fin
+
+_pattern:
+	cn5 127,10
+	gn4 127,10
+	cn5 127,10
+	gn4 127,10
+	ret
+
+
+; ポルタメント
+; cn4->cn5、cn5->cn3、cn3（ポルタメントなし）の順に発音する
+porta_seq:
+	prg 2
+	porta cn4
+	cn5 127,48
+	cn3 127,48
+	porta_off
+	cn4 127,48
+	fin
+
+
+; porta_time を使ったポルタメント
+; cn4->cn5、cn5->cn3、cn3（ポルタメントなし）の順に発音する
+porta_time_seq:
+	prg 2
+	porta cn4
+    porta_time 10
+	cn5 127,48
+	cn3 127,48
+	porta_off
+	cn4 127,48
+	fin
+
+; スイープ
+; 各音の始めが、全音下からスイープする
+sweep_seq:
+	prg 2
+	porta_time 16
+	sweep_pitch -64*2
+    cn5 127,48
+    bn4 127,48
+    an4 127,48
+    gn4 127,48
+    fn4 127,48
+    en4 127,48
+    dn4 127,48
+    cn4 127,48
+	fin
+
+
+; モジュレーション
+; 音程のモジュレーションでノートオンするごとにモジュレーション速度が速くなる
+mod_seq:
+	prg 2
+	mod_type MOD_TYPE_PITCH
+	mod_depth 64
+	mod_speed 24
+	cn5 127,48
+	mod_speed 48
+	cn5 127,48
+	mod_speed 96
+	cn5 127,48
+	fin
+
+
+; タイモード
+; 上記のモジュレーションシーケンスでノートコマンドをタイで結ぶことにより、
+; ノートオンした音のモジュレーション速度が速くなっていく
+tie_seq:
+	prg 2
+	mod_type MOD_TYPE_PITCH
+	mod_depth 64
+	mod_speed 24
+	tieon
+	cn5 127,48
+	mod_speed 48
+	cn5 127,48
+	mod_speed 96
+	cn5 127,48
+	tieoff
+	fin
+
+
+
+; ノートウエイトなし
+; スーパーマリオのイントロの3音ポリフォニックノートを一つのトラックで行っている
+waitoff_seq:
+	prg 2
+	tempo 103
+	notewait_off
+	en5 100,10
+	fs4 100,10
+	dn3 100,10
+	wait 12
+	en5 100,12
+	fs4 100,12
+	dn3 100,12
+	wait 24
+	en5 100,12
+	fs4 100,12
+	dn3 100,12
+	wait 24
+	cn5 100,10
+	fs4 100,10
+	dn3 100,10
+	wait 12
+	en5 100,12
+	fs4 100,12
+	dn3 100,12
+	wait 24
+	gn5 100,12
+	gn4 100,12
+	gn3 100,12
+	wait 48
+	gn4 100,12
+	gn3 100,12
+	wait 48
+	fin
+
+
+; トラックオープン
+; 上記のノートウエイトなしと同じ発音を３トラックに分けて、１トラック１音で行っている
+; さらにトラック３でノイズのトラックも付加している。
+opentrack_seq:
+	alloctrack TRACK_1 | TRACK_2 | TRACK_3
+	opentrack 1, _seq_1
+	opentrack 2, _seq_2
+	opentrack 3, _seq_3
+	prg 2
+	tempo 103
+	en5 100,10
+	wait 2
+	en5 100,12
+	wait 12
+	en5 100,12
+	wait 12
+	cn5 100,10
+	wait 2
+	en5 100,12
+	wait 12
+	gn5 100,12
+	wait 36
+	gn4 100,12
+	wait 36
+	fin
+
+_seq_1:
+	prg 2
+	fs4 100,10
+	wait 2
+	fs4 100,12
+	wait 12
+	fs4 100,12
+	wait 12
+	fs4 100,10
+	wait 2
+	fs4 100,12
+	wait 12
+	gn4 100,12
+	wait 36
+	gn3 100,12
+	wait 36
+	fin
+
+_seq_2:
+	prg 2
+	dn3 100,10
+	wait 2
+	dn3 100,12
+	wait 12
+	dn3 100,12
+	wait 12
+	dn3 100,10
+	wait 2
+	dn3 100,12
+	wait 12
+	gn3 100,12
+	wait 36
+	fin
+
+_seq_3:
+	prg 4
+    volume 90
+	en8 100,4
+	wait 20
+	cn8 100,2
+	wait 10
+	en8 100,4
+	wait 20
+	cn8 100,2
+	wait 10
+	en8 100,4
+	wait 20
+	en8 100,4
+	wait 32
+	en8 100,6
+	wait 6
+	wait 12
+	en8 100,2
+	wait 10
+	en8 100,2
+	wait 10
+	en8 100,2
+	wait 10
+	fin
+

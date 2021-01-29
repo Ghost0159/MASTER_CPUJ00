@@ -1,0 +1,46 @@
+#
+#  Nitro ROM SPEC FILE
+#
+
+Arm9
+{
+	Static		"$(MAKEROM_ARM9:r).sbin$(COMPSUFFIX9)"
+	OverlayDefs	"$(MAKEROM_ARM9:r)_defs.sbin$(COMPSUFFIX9)"
+	OverlayTable	"$(MAKEROM_ARM9:r)_table.sbin$(COMPSUFFIX9)"
+	Elf		"$(MAKEROM_ARM9:r).nef"
+}
+
+Arm7
+{
+	Static		"$(MAKEROM_ARM7:r).sbin$(COMPSUFFIX7)"
+	OverlayDefs	"$(MAKEROM_ARM7:r)_defs.sbin$(COMPSUFFIX7)"
+	OverlayTable	"$(MAKEROM_ARM7:r)_table.sbin$(COMPSUFFIX7)"
+	Elf		"$(MAKEROM_ARM7:r).nef"
+}
+
+Property
+{
+  RomSpeedType  $(MAKEROM_ROMSPEED)
+}
+
+RomSpec
+{
+	Offset		0x00000000
+	Segment		ALL
+
+	Align		512
+	Padding		0xFF
+
+	HostRoot	$(MAKEROM_ROMROOT)
+	Root		/
+	File		$(MAKEROM_ROMFILES)
+	
+	HostRoot	data
+	Root		/data
+	File		icon.char
+	
+	HostRoot	data
+	Root		/data
+	File		icon.plt
+}
+

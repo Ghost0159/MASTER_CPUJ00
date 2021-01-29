@@ -1,0 +1,67 @@
+#----------------------------------------------------------------------------
+# Project:  NitroSDK - WVR - demos
+# File:     main.rsf
+#
+# Copyright 2003-2005 Nintendo.  All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: main.rsf,v $
+# Revision 1.2  2005/04/05 12:16:10  yosizaki
+# support RomSpeedType parameter.
+#
+# Revision 1.1  2005/01/14 06:25:50  terui
+# testsà»â∫Ç©ÇÁdemosà»â∫Ç…à⁄ìÆÅB
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+#
+#  Nitro ROM SPEC FILE
+#
+
+Arm9
+{
+	Static		"$(MAKEROM_ARM9:r).sbin$(COMPSUFFIX9)"
+	OverlayDefs	"$(MAKEROM_ARM9:r)_defs.sbin$(COMPSUFFIX9)"
+	OverlayTable	"$(MAKEROM_ARM9:r)_table.sbin$(COMPSUFFIX9)"
+	Elf		"$(MAKEROM_ARM9:r).nef"
+}
+
+Arm7
+{
+	Static		"$(MAKEROM_ARM7:r).sbin$(COMPSUFFIX7)"
+	OverlayDefs	"$(MAKEROM_ARM7:r)_defs.sbin$(COMPSUFFIX7)"
+	OverlayTable	"$(MAKEROM_ARM7:r)_table.sbin$(COMPSUFFIX7)"
+	Elf		"$(MAKEROM_ARM7:r).nef"
+}
+
+Property
+{
+  RomSpeedType  $(MAKEROM_ROMSPEED)
+}
+
+RomSpec
+{
+	Offset		0x00000000
+	Segment		ALL
+
+	Align		512
+	Padding		0xFF
+
+	HostRoot	$(MAKEROM_ROMROOT)
+	Root		/
+	File		$(MAKEROM_ROMFILES)
+	
+	HostRoot	data
+	Root		/data
+	File		icon.char
+	
+	HostRoot	data
+	Root		/data
+	File		icon.plt
+}
+

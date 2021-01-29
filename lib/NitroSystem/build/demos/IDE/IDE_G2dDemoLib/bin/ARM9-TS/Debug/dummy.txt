@@ -1,0 +1,1 @@
+NITRO-System/build/demos/IDE/IDE_G2dDemoLib/bin/ARM9-TS/Debug

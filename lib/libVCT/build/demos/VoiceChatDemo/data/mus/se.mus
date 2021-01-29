@@ -1,0 +1,50 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	SeqArc for Sample SE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#include <sound_data.sbdl>
+
+@SEQ_TABLE	
+
+SE_RINGIN:         ringin,        BANK_SE, 127, 96, 64, PLAYER_VOICE
+SE_RINGOUT:        ringout,       BANK_SE, 127, 96, 64, PLAYER_VOICE
+SE_BEEP:           beep,          BANK_SE, 127, 96, 64, PLAYER_VOICE
+SE_NOISE:          noise,         BANK_SE, 127, 96, 64, PLAYER_VOICE
+SE_BUSY:           busy,          BANK_SE, 127, 96, 64, PLAYER_VOICE
+
+
+@SEQ_DATA
+
+ringin:
+    prg 0
+  loop_start0:
+    cn3 127, 0
+    cn4 0, 0
+    cn4 0, 0
+  jump loop_start0
+    fin
+    
+ringout:
+    prg 1
+  loop_start1:
+    cn4 127, 0
+    cn4 0, 0
+    cn4 0, 0
+  jump loop_start1
+    fin
+    
+beep:
+    prg 2
+    cn4 127, 0
+    fin
+    
+noise:
+    prg 3
+    cn4 127, 0
+    fin
+    
+busy:
+    prg 4
+    cn4 127, 0
+    fin
+    

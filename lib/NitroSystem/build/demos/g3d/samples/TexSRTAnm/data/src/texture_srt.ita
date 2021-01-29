@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<ita version="1.4.0">
+
+<head>
+	<create user="nishida_kenji" host="NISHIDAK-WIN" date="2004-08-02T13:09:28" source="texture_srt.mb"/>
+	<title>Texture SRT Animation Data for NINTENDO NITRO-System</title>
+	<generator name="Maya 5.0.1 NNS_Export" version="1.4.0"/>
+</head>
+
+<body>
+
+<tex_srt_info
+	frame_size="180"
+	tool_start_frame="1"
+	tool_end_frame="180"
+	interpolation="linear"
+	interp_end_to_start="off"
+	tex_matrix_mode="maya"
+	compress_material="off" material_size="3 3"
+	frame_step_mode="auto"
+	tolerance_tex_scale="0.100000"
+	tolerance_tex_rotate="0.100000"
+	tolerance_tex_translate="0.010000"
+/>
+
+<tex_scale_data size="98">
+	2.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+	1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+	1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+	1.003662 1.019043 1.045410 1.082031 1.127441 1.180420 1.240234 1.305420 1.375000 1.447754
+	1.522949 1.598877 1.674805 1.749756 1.822021 1.891113 1.955322 1.970703 1.985596 2.000000
+	2.000000 1.938965 1.872070 1.801025 1.726807 1.650391 1.573242 1.496338 1.420898 1.348145
+	1.279053 1.215088 1.156982 1.106445 1.064209 1.031738 1.010010 1.000488 1.000000 1.000000
+	1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+	1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+	1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 
+</tex_scale_data>
+
+<tex_rotate_data size="50">
+	30.000000 38.044678 46.089355 54.134033 62.178711 70.223389 78.268066 86.312744 94.357666 102.402344
+	110.447021 118.491699 126.536377 134.581055 142.625732 150.670410 158.715088 166.759766 174.804443 -177.150879
+	-169.106201 -161.061523 -153.016846 -144.972168 -136.927490 -128.882568 -120.837891 -112.793213 -104.748535 -96.703857
+	-88.659180 -80.614502 -72.569824 -64.525146 -56.480469 -48.435791 -40.391113 -32.346436 -24.301758 -16.257080
+	-8.212402 -0.167480 7.877197 15.921875 23.966553 25.977539 27.988770 30.000000 0.000000 -20.000000
+</tex_rotate_data>
+
+<tex_translate_data size="98">
+	0.000000 0.000000 0.046875 0.097168 0.150635 0.206299 0.263916 0.322754 0.382324 0.442383
+	0.501953 0.560547 0.617920 0.673340 0.726074 0.776123 0.822266 0.864258 0.901855 0.934082
+	0.960449 0.980469 0.993896 0.999756 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+	1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+	1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.000000
+	0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+	0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+	0.000000 0.000000 0.004395 0.023193 0.056152 0.101807 0.159424 0.227783 0.305908 0.392822
+	0.487305 0.588379 0.695068 0.805908 0.920410 1.037354 1.155518 1.273926 1.391602 1.507568
+	1.620361 1.729248 1.833252 1.931152 1.954590 1.977539 2.000000 0.500000 
+</tex_translate_data>
+
+<tex_srt_anm_array size="3">
+	<tex_srt_anm index="0" material_name="lambert2">
+		<tex_scale_s frame_step="1" data_size="1" data_head="0"/>
+		<tex_scale_t frame_step="1" data_size="1" data_head="0"/>
+		<tex_rotate frame_step="4" data_size="48" data_head="0"/>
+		<tex_translate_s frame_step="1" data_size="1" data_head="0"/>
+		<tex_translate_t frame_step="1" data_size="1" data_head="0"/>
+	</tex_srt_anm>
+	<tex_srt_anm index="1" material_name="lambert3">
+		<tex_scale_s frame_step="1" data_size="1" data_head="1"/>
+		<tex_scale_t frame_step="1" data_size="1" data_head="1"/>
+		<tex_rotate frame_step="1" data_size="1" data_head="48"/>
+		<tex_translate_s frame_step="4" data_size="48" data_head="1"/>
+		<tex_translate_t frame_step="4" data_size="48" data_head="49"/>
+	</tex_srt_anm>
+	<tex_srt_anm index="2" material_name="lambert4">
+		<tex_scale_s frame_step="4" data_size="48" data_head="2"/>
+		<tex_scale_t frame_step="4" data_size="48" data_head="50"/>
+		<tex_rotate frame_step="1" data_size="1" data_head="49"/>
+		<tex_translate_s frame_step="1" data_size="1" data_head="97"/>
+		<tex_translate_t frame_step="1" data_size="1" data_head="0"/>
+	</tex_srt_anm>
+</tex_srt_anm_array>
+
+</body>
+
+</ita>

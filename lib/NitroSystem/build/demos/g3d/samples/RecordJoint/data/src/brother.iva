@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<iva version="1.4.0">
+
+<head>
+	<create user="nishida_kenji" host="NISHIDAK-WIN" date="2004-07-26T10:56:10" source="brother.mb"/>
+	<title>Visibility Animation Data for NINTENDO NITRO-System</title>
+	<generator name="Maya 5.0.1 NNS_Export" version="1.4.0"/>
+</head>
+
+<body>
+
+<visibility_info
+	frame_size="300"
+	tool_start_frame="1"
+	tool_end_frame="300"
+	compress_node="none" node_size="7 7"
+/>
+
+<visibility_data>
+	<frame_idx size="15">
+		0 79 89 99 109 0 169 179 189 199
+		0 239 249 259 269 
+	</frame_idx>
+	<visibility size="15">
+		1 0 1 0 1 1 0 1 0 1
+		1 0 1 0 1 
+	</visibility>
+</visibility_data>
+
+<visibility_anm_array size="7">
+	<visibility_anm index="0" data_size="5" data_head="0"/>
+	<visibility_anm index="1" data_size="5" data_head="5"/>
+	<visibility_anm index="2" data_size="5" data_head="10"/>
+	<visibility_anm index="3" data_size="5" data_head="5"/>
+	<visibility_anm index="4" data_size="5" data_head="5"/>
+	<visibility_anm index="5" data_size="5" data_head="5"/>
+	<visibility_anm index="6" data_size="5" data_head="10"/>
+</visibility_anm_array>
+
+</body>
+
+</iva>

@@ -1,0 +1,3 @@
+#define PLAYER_STRM	0
+#define KART_TITLE_INTRO	0
+#define KART_TITLE_A_MELO	1

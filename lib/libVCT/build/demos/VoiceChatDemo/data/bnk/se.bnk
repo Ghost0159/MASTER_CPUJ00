@@ -1,0 +1,12 @@
+;*******************************************
+;	Bank for Sample SE
+;*******************************************
+
+@PATH "../wav"
+
+@INSTLIST
+   0 : ADPCM, "ringin.wav",  cn4, 127, 127, 127, 125
+   1 : ADPCM, "ringout.wav", cn4, 127, 127, 127, 125
+   2 : ADPCM, "beep.wav",    cn4, 127, 127, 127, 125
+   3 : ADPCM, "noise.wav",   cn4, 127, 127, 127, 125
+   4 : ADPCM, "busy.wav",    cn4, 127, 127, 127, 125

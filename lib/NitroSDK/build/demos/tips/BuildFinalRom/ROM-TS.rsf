@@ -1,0 +1,114 @@
+#----------------------------------------------------------------------------
+# Project:  NitroSDK - include
+# File:     ROM-TS.lsf
+#
+# Copyright 2003-2005 Nintendo.  All rights reserved.
+#
+# These coded insructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: ROM-TS.rsf,v $
+# Revision 1.5  2005/06/20 01:06:24  yasu
+# fix UNDEF -> UNDEFINED
+#
+# Revision 1.4  2005/06/17 02:00:07  yasu
+# fixed RomSpeedType
+#
+# Revision 1.3  2005/06/14 04:19:55  yasu
+# RomSpeedType ÇÃãLèqèCê≥
+#
+# Revision 1.2  2005/04/05 12:16:10  yosizaki
+# support RomSpeedType parameter.
+#
+# Revision 1.1  2004/09/21 02:02:53  yasu
+# Demo for building final rom
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+#
+#  Nitro ROM SPEC FILE
+#
+
+Arm9
+{
+	Static		"$(MAKEROM_ARM9:r).sbin$(COMPSUFFIX9)"
+	OverlayDefs	"$(MAKEROM_ARM9:r)_defs.sbin$(COMPSUFFIX9)"
+	OverlayTable	"$(MAKEROM_ARM9:r)_table.sbin$(COMPSUFFIX9)"
+	Elf		"$(MAKEROM_ARM9:r).nef"
+}
+
+Arm7
+{
+	Static		"$(MAKEROM_ARM7:r).sbin$(COMPSUFFIX7)"
+	OverlayDefs	"$(MAKEROM_ARM7:r)_defs.sbin$(COMPSUFFIX7)"
+	OverlayTable	"$(MAKEROM_ARM7:r)_table.sbin$(COMPSUFFIX7)"
+	Elf		"$(MAKEROM_ARM7:r).nef"
+}
+
+Property
+{
+	###
+	### Settings for FinalROM
+	###
+	#### BEGIN
+	#
+	# TITLE NAME: Your product name within 12bytes
+	#
+	TitleName		"YourAppName"
+
+	#
+	# MAKER CODE: Your company ID# in 2 ascii words
+	#             issued by NINTENDO
+	#
+	MakerCode		"00"
+
+	#
+	# REMASTER VERSION: Mastering version
+	#
+	RemasterVersion		0
+
+	#
+	# ROM SPEED TYPE: Set to 1TROM or MROM for master ROM
+	#
+	RomSpeedType		UNDEFINED	# only for test version
+#	RomSpeedType		1TROM
+#	RomSpeedType		MROM
+
+	#
+	# ROM SIZE: in bit [64M/128M/256M/512M/1G/2G]
+	#
+	RomSize			128M
+	#RomSize		256M
+
+	#
+	# ROM PADDING: TRUE if finalrom
+	#
+	RomFootPadding 		TRUE
+
+	#
+	# ROM HEADER TEMPLATE: Provided to every product by NINTENDO
+	#
+	RomHeaderTemplate	./etc/rom_header.template.sbin
+
+	#
+	# BANNER FILE: generated from Banner Spec File
+	#
+	BannerFile		./etc/myGameBanner.bnr
+
+	###
+	###
+	###
+	#### END
+}
+
+RomSpec
+{
+	Offset		0x00000000
+	Segment		ALL
+	HostRoot	$(MAKEROM_ROMROOT)
+	Root		/
+	File		$(MAKEROM_ROMFILES)
+}

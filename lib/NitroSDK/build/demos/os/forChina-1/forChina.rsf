@@ -1,0 +1,110 @@
+#----------------------------------------------------------------------------
+# Project:  NitroSDK - demos - OS - forChina-1
+# File:     forChina.rsf
+#
+# Copyright 2005 Nintendo.  All rights reserved.
+#
+# These coded insructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: forChina.rsf,v $
+# Revision 1.1  2005/05/14 01:07:02  terui
+# êVãKí«â¡
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+#
+#  Nitro ROM SPEC FILE
+#
+
+Arm9
+{
+	Static			"$(MAKEROM_ARM9:r).sbin$(COMPSUFFIX9)"
+	OverlayDefs		"$(MAKEROM_ARM9:r)_defs.sbin$(COMPSUFFIX9)"
+	OverlayTable	"$(MAKEROM_ARM9:r)_table.sbin$(COMPSUFFIX9)"
+	Elf				"$(MAKEROM_ARM9:r).nef"
+}
+
+Arm7
+{
+	Static			"$(MAKEROM_ARM7:r).sbin$(COMPSUFFIX7)"
+	OverlayDefs		"$(MAKEROM_ARM7:r)_defs.sbin$(COMPSUFFIX7)"
+	OverlayTable	"$(MAKEROM_ARM7:r)_table.sbin$(COMPSUFFIX7)"
+	Elf				"$(MAKEROM_ARM7:r).nef"
+}
+
+Property
+{
+	###
+	### Settings for FinalROM
+	###
+	#### BEGIN
+	#
+	# TITLE NAME: Your product name within 12bytes
+	#
+	#TitleName		"YourAppName"
+
+	#
+	# MAKER CODE: Your company ID# in 2 ascii words
+	#             issued by NINTENDO
+	#
+	#MakerCode		"00"
+
+	#
+	# REMASTER VERSION: Mastering version
+	#
+	#RomVersion		0
+
+	#
+	# ROM SPEED TYPE: [MROM/1TROM/UNDEFINED]
+	#
+	RomSpeedType	$(MAKEROM_ROMSPEED)
+
+	#
+	# ROM SIZE: in bit [64M/128M/256M/512M/1G/2G]
+	#
+	#RomSize		128M
+	#RomSize		256M
+
+	#
+	# ROM PADDING: TRUE if finalrom
+	#
+	#RomFootPadding 	TRUE
+
+	#
+	# ROM HEADER TEMPLATE: Provided to every product by NINTENDO
+	#
+	#RomHeaderTemplate	./etc/rom_header.template.sbin
+
+	################################################################
+	#
+	# ROM FOR CHINA FLAG : TRUE if ROM is for China
+	#
+	
+	ForChina		TRUE
+	
+	################################################################
+
+	#
+	# BANNER FILE: generated from Banner Spec File
+	#
+	#BannerFile		./etc/myGameBanner.bnr
+	BannerFile		$(NITROSDK_ROOT)/include/nitro/specfiles/default.bnr
+
+	###
+	###
+	###
+	#### END
+}
+
+RomSpec
+{
+	Offset		0x00000000
+	Segment		ALL
+	HostRoot	$(MAKEROM_ROMROOT)
+	Root		/
+	File		$(MAKEROM_ROMFILES)
+}

@@ -1,0 +1,65 @@
+#----------------------------------------------------------------------------
+# Project:  NitroSDK - WBT - demos - wbt-fs
+# File:     main.lsf
+#
+# Copyright 2003,2004 Nintendo.  All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: main.lsf,v $
+# Revision 1.1  2004/10/25 10:17:26  yosizaki
+# (none)
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+#
+#  Nitro LCF SPEC FILE
+#
+
+Static main
+{
+	Address		$(ADDRESS_MAIN)
+	Object		$(OBJS_STATIC)
+	Library		$(LLIBS) $(GLIBS) $(CW_LIBS)
+
+#	increase capacity of IRQ stack.
+	StackSize	0 0x800
+}
+
+Autoload ITCM
+{
+	Address		0x01ff8000
+	Object		*     		 (.itcm)
+	Object		$(OBJS_AUTOLOAD) (.text)
+}
+
+Autoload DTCM
+{
+	Address		$(ADDRESS_DTCM)
+	Object		*     		 (.dtcm)
+	Object		$(OBJS_AUTOLOAD) (.data)
+	Object		$(OBJS_AUTOLOAD) (.bss)
+}
+
+
+Overlay main_overlay_1
+{
+	After		main
+	Object		$(OBJDIR)/func_1.o
+}
+
+Overlay main_overlay_2
+{
+	After		main
+	Object		$(OBJDIR)/func_2.o
+}
+
+Overlay main_overlay_3
+{
+	After		ITCM
+	Object		$(OBJDIR)/func_3.o
+}

@@ -1,0 +1,20 @@
+/*****************************************************************************
+	Archive file index definition.
+	File: picture.naix
+
+	This file was created by NINTENDO NITRO-System Archiver.
+
+	Update:2004-05-26T17:45:19
+ *****************************************************************************/
+
+#ifndef NARC_PICTURE_NAIX_
+#define NARC_PICTURE_NAIX_
+
+enum {
+	NARC_picture_dog256_chr = 0,
+	NARC_picture_dog256_pal = 1,
+	NARC_picture_dog256_scn = 2
+};
+
+/* NARC_PICTURE_NAIX_ */
+#endif

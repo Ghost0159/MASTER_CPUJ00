@@ -1,0 +1,1 @@
+This file : "/bar/test2.txt"

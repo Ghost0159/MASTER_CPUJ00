@@ -1,0 +1,32 @@
+#! make -f
+#----------------------------------------------------------------------------
+# Project:  NitroWiFi - sitedefs
+# File:     commondefs.add-ins.sitedefs
+#
+# Copyright 2005 Nintendo.  All rights reserved.
+#
+# These coded insructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: commondefs.add-ins.netconnect,v $
+# Revision 1.1  2005/12/22 04:32:58  adachi_hiroaki
+# ä»à’é©ìÆê⁄ë±ÉâÉCÉuÉâÉäÇÉfÉÇÇ∆ÇµÇƒí«â¡
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+NWIFI_DEMOS_NETCONNECT_ROOT	?= $(NWIFI_ROOT)/build/demos/soc/netconnect
+NWIFI_DEMOS_NETCONNECT_INCDIR	?= $(NWIFI_DEMOS_NETCONNECT_ROOT)/include
+NWIFI_DEMOS_NETCONNECT_LIBDIR	?= $(NWIFI_DEMOS_NETCONNECT_ROOT)/lib/$(NITRO_LIBTYPE)
+NWIFI_DEMOS_NETCONNECT_LIBS	?= libnetconnect$(NITROWIFI_LIBSUFFIX).a
+
+EINCLUDES			+= $(NWIFI_DEMOS_NETCONNECT_INCDIR)
+ELIBRARY_DIRS			+= $(NWIFI_DEMOS_NETCONNECT_LIBDIR)
+ELIBRARIES			+= $(NWIFI_DEMOS_NETCONNECT_LIBS)
+
+
+include	$(NITROWIFI_ROOT)/build/demos/SiteDefs/commondefs.add-ins.sitedefs
+
+#===== End of commondefs.add-ins.sitedefs =====

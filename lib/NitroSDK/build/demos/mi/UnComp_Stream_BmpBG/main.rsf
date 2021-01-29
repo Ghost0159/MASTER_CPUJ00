@@ -1,0 +1,69 @@
+#----------------------------------------------------------------------------
+# Project:  NITRO-SDK - demos - MI - UnComp_Stream_BmpBG
+# File:     main.rsf
+#
+# Copyright 2004,2005 Nintendo.  All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: main.rsf,v $
+# Revision 1.5  2005/04/05 12:16:10  yosizaki
+# support RomSpeedType parameter.
+#
+# Revision 1.4  2005/02/18 04:03:15  terui
+# Update copyright
+#
+# Revision 1.3  2005/02/17 23:55:47  terui
+# コンポーネント指定をferret明示指定からデフォルトに変更
+#
+# Revision 1.2  2004/11/30 08:01:24  takano_makoto
+# small fix in comment.
+#
+# Revision 1.1  2004/11/30 08:00:05  takano_makoto
+# Initial update.
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+#
+#  Nitro ROM SPEC FILE
+#
+
+Arm9
+{
+	Static		"$(MAKEROM_ARM9:r).sbin$(COMPSUFFIX9)"
+	OverlayDefs	"$(MAKEROM_ARM9:r)_defs.sbin$(COMPSUFFIX9)"
+	OverlayTable	"$(MAKEROM_ARM9:r)_table.sbin$(COMPSUFFIX9)"
+	Elf		"$(MAKEROM_ARM9:r).nef"
+}
+
+Arm7
+{
+	Static		"$(MAKEROM_ARM7:r).sbin$(COMPSUFFIX7)"
+	OverlayDefs	"$(MAKEROM_ARM7:r)_defs.sbin$(COMPSUFFIX7)"
+	OverlayTable	"$(MAKEROM_ARM7:r)_table.sbin$(COMPSUFFIX7)"
+	Elf		"$(MAKEROM_ARM7:r).nef"
+}
+
+Property
+{
+  RomSpeedType  $(MAKEROM_ROMSPEED)
+}
+
+RomSpec
+{
+	Offset			0x00000000
+	Segment			ALL
+
+	Align			512
+	Padding			0xFF
+
+	HostRoot		data
+	Root			/data
+	File			*.bin
+
+}
+

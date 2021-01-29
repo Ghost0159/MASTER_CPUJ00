@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<itp version="1.4.0">
+
+<head>
+	<create user="tanimoto" host="TANIMOTO-WIN" date="2004-07-26T14:14:02" source="itp_sample.mb"/>
+	<title>Texture Pattern Animation Data for NINTENDO NITRO-System</title>
+	<generator name="Maya 5.0.1 NNS_Export" version="1.4.0"/>
+</head>
+
+<body>
+
+<tex_pattern_info
+	frame_size="300"
+	tool_start_frame="1"
+	tool_end_frame="300"
+	compress_material="on" material_size="1 1"
+/>
+
+<tex_pattern_list_data image_size="10" palette_size="0">
+	<image_name index="0" name="p.1"/>
+	<image_name index="1" name="p.10"/>
+	<image_name index="2" name="p.2"/>
+	<image_name index="3" name="p.3"/>
+	<image_name index="4" name="p.4"/>
+	<image_name index="5" name="p.5"/>
+	<image_name index="6" name="p.6"/>
+	<image_name index="7" name="p.7"/>
+	<image_name index="8" name="p.8"/>
+	<image_name index="9" name="p.9"/>
+</tex_pattern_list_data>
+
+<tex_pattern_data>
+	<frame_idx size="15">
+		0 19 39 60 79 99 119 139 159 179
+		219 239 259 279 299 
+	</frame_idx>
+	<image_idx size="15">
+		0 2 3 4 5 6 7 8 9 1
+		6 5 7 3 0 
+	</image_idx>
+	<palette_idx size="15">
+		-1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+		-1 -1 -1 -1 -1 
+	</palette_idx>
+</tex_pattern_data>
+
+<tex_pattern_anm_array size="1">
+	<tex_pattern_anm index="0" material_name="lambert2" data_size="15" data_head="0"/>
+</tex_pattern_anm_array>
+
+</body>
+
+</itp>

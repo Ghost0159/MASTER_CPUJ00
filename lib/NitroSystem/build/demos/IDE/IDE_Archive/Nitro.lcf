@@ -1,0 +1,395 @@
+#! make -f
+#----------------------------------------------------------------------------
+# Project:  NITRO-System - demos - IDE - IDE_Archive
+# File:     Nitro.lcf
+#
+# Copyright 2004-2007 Nintendo.  All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Revision: 1.3 $
+#----------------------------------------------------------------------------
+MEMORY
+{
+	main		(RWX) : ORIGIN = 0x02000000,   LENGTH = 0x0 >  main.sbin
+	ITCM		(RWX) : ORIGIN = 0x01ff8000, LENGTH = 0x0 >> main.sbin
+	DTCM		(RWX) : ORIGIN = 0x027e0000, LENGTH = 0x0 >> main.sbin
+	binary.AUTOLOAD_INFO		(RWX) : ORIGIN = 0, LENGTH = 0x0 >> main.sbin
+	binary.STATIC_FOOTER		(RWX) : ORIGIN = 0, LENGTH = 0x0 >> main.sbin
+	
+	main_defs	(RW)  : ORIGIN = AFTER(main), LENGTH = 0x0 > main_defs.sbin
+	main_table	(RW)  : ORIGIN = AFTER(main), LENGTH = 0x0 > main_table.sbin
+	dummy.MAIN_EX		(RW)  : ORIGIN = 0x023e0000, LENGTH = 0x0
+	arena.MAIN			(RW)  : ORIGIN = AFTER(main), LENGTH = 0x0
+	arena.MAIN_EX		(RW)  : ORIGIN = AFTER(dummy.MAIN_EX), LENGTH = 0x0
+	arena.ITCM		(RW)  : ORIGIN = AFTER(ITCM), LENGTH = 0x0
+	arena.DTCM		(RW)  : ORIGIN = AFTER(DTCM), LENGTH = 0x0
+	binary.MODULE_FILES		(RW)  : ORIGIN = 0x0, LENGTH = 0x0     > component.files
+	check.ITCM			(RWX) : ORIGIN = 0x0, LENGTH = 0x08000 > itcm.check
+	check.DTCM			(RW)  : ORIGIN = 0x0, LENGTH = 0x04000 > dtcm.check
+}
+
+FORCE_ACTIVE
+{
+	SVC_SoftReset
+}
+
+KEEP_SECTION
+{
+	.sinit
+}
+
+SECTIONS
+{
+	############################ STATIC #################################
+	.main:
+	{
+	ALIGNALL(4);			. = ALIGN(32);	# Fit to cache line
+					
+	#
+	#  TEXT BLOCK: READ ONLY
+	#
+	SDK_STATIC_START		=.;
+	SDK_STATIC_TEXT_START		=.;
+					#:::::::::: text/rodata
+					libsyscall.a (.text)
+					crt0.o (.text)
+					crt0.o (.rodata)
+					#
+					# .version セクションを追加しています。
+					# このセクションに含まれる情報はロットチェックの際に
+					# 必要となりますので、必ずこの位置に残すようにして下さい。
+					#
+					* (.version)
+					OBJECT(NitroMain,*)
+					GROUP(ROOT) (.text)
+					. = ALIGN(4);
+					* (.exception)
+					. = ALIGN(4);
+	SDK_STATIC_ETABLE_START		=.;
+					EXCEPTION
+	SDK_STATIC_ETABLE_END		=.;
+					. = ALIGN(4);
+					GROUP(ROOT) (.init)
+					. = ALIGN(4);
+					GROUP(ROOT) (.rodata)
+					. = ALIGN(4);
+
+	SDK_STATIC_SINIT_START		=.;
+					#:::::::::: ctor
+					GROUP(ROOT) (.ctor)
+					GROUP(ROOT) (.sinit)
+					WRITEW	0;
+					#:::::::::: ctor
+	SDK_STATIC_SINIT_END		=.;
+
+					#:::::::::: text/rodata
+					. = ALIGN(32);
+	SDK_STATIC_TEXT_END		=.;
+	
+	#
+	#  DATA BLOCK: READ WRITE
+	#
+	SDK_STATIC_DATA_START		=.;
+					#:::::::::: data
+					GROUP(ROOT) (.sdata)
+					. = ALIGN(4);
+					GROUP(ROOT) (.data)
+					. = ALIGN(4);
+	SDK_OVERLAY_DIGEST		=.;
+					# NO DIGEST
+	SDK_OVERLAY_DIGEST_END		=.;
+					#:::::::::: data
+					. = ALIGN(32);
+	SDK_STATIC_DATA_END		=.;
+	SDK_STATIC_END			=.;
+
+	SDK_STATIC_TEXT_SIZE		= SDK_STATIC_TEXT_END - SDK_STATIC_TEXT_START;
+	SDK_STATIC_DATA_SIZE		= SDK_STATIC_DATA_END - SDK_STATIC_DATA_START;
+	SDK_STATIC_SIZE			= SDK_STATIC_END      - SDK_STATIC_START;
+	__sinit__			= SDK_STATIC_SINIT_START;	# for static initializer
+	__exception_table_start__	= SDK_STATIC_ETABLE_START;	# for exception table
+	__exception_table_end__		= SDK_STATIC_ETABLE_END;	# for exception table
+	} > main
+
+	.main.bss:
+	{
+	ALIGNALL(4);			. = ALIGN(32);
+					
+	#
+	#  BSS BLOCK
+	#
+	SDK_STATIC_BSS_START		=.;
+					#:::::::::: bss
+					GROUP(ROOT) (.sbss)
+					. = ALIGN(4);
+					GROUP(ROOT) (.bss)
+					. = ALIGN(4);
+					#:::::::::: bss
+					. = ALIGN(32);
+	SDK_STATIC_BSS_END		= .;
+	SDK_STATIC_BSS_SIZE		= SDK_STATIC_BSS_END - SDK_STATIC_BSS_START;
+
+	} >> main
+	
+	
+	############################ AUTOLOADS ##############################
+	SDK_AUTOLOAD.ITCM.START			= 0x01ff8000;
+	SDK_AUTOLOAD.ITCM.END			= SDK_AUTOLOAD.ITCM.START;
+	SDK_AUTOLOAD.ITCM.BSS_END		= SDK_AUTOLOAD.ITCM.START;
+	SDK_AUTOLOAD.ITCM.SIZE			= 0;
+	SDK_AUTOLOAD.ITCM.BSS_SIZE		= 0;
+	SDK_AUTOLOAD.DTCM.START			= 0x027e0000;
+	SDK_AUTOLOAD.DTCM.END			= SDK_AUTOLOAD.DTCM.START;
+	SDK_AUTOLOAD.DTCM.BSS_END		= SDK_AUTOLOAD.DTCM.START;
+	SDK_AUTOLOAD.DTCM.SIZE			= 0;
+	SDK_AUTOLOAD.DTCM.BSS_SIZE		= 0;
+	SDK_AUTOLOAD_START			= SDK_STATIC_END;
+	SDK_AUTOLOAD_SIZE			= 0;
+	SDK_AUTOLOAD_NUMBER			= 2;
+
+	.ITCM:
+	{
+	ALIGNALL(4);				. = ALIGN(32);
+						
+	#
+	#   TEXT BLOCK: READ ONLY
+	#
+	SDK_AUTOLOAD_ITCM_ID		=0;
+	SDK_AUTOLOAD.ITCM.ID		=0;
+	SDK_AUTOLOAD.ITCM.START	=.;
+	SDK_AUTOLOAD.ITCM.TEXT_START	=.;
+						#:::::::::: text/rodata
+						. = ALIGN(4);
+						* (.itcm)
+						. = ALIGN(4);
+						. = ALIGN(4);
+						#:::::::::: text/rodata
+	SDK_AUTOLOAD.ITCM.TEXT_END	=.;
+
+	#
+	#  DATA BLOCK: READ WRITE BLOCK
+	#
+	SDK_AUTOLOAD.ITCM.DATA_START	=.;
+						#:::::::::: data
+						. = ALIGN(4);
+						. = ALIGN(4);
+						. = ALIGN(4);
+						#:::::::::: data
+						. = ALIGN(32);
+	SDK_AUTOLOAD.ITCM.DATA_END	=.;
+	SDK_AUTOLOAD.ITCM.END	=.;
+	
+	SDK_AUTOLOAD.ITCM.TEXT_SIZE	= SDK_AUTOLOAD.ITCM.TEXT_END - SDK_AUTOLOAD.ITCM.TEXT_START;
+	SDK_AUTOLOAD.ITCM.DATA_SIZE	= SDK_AUTOLOAD.ITCM.DATA_END - SDK_AUTOLOAD.ITCM.DATA_START;
+	SDK_AUTOLOAD.ITCM.SIZE	= SDK_AUTOLOAD.ITCM.END	- SDK_AUTOLOAD.ITCM.START;
+	SDK_AUTOLOAD_SIZE			= SDK_AUTOLOAD_SIZE + SDK_AUTOLOAD.ITCM.SIZE;
+
+	} > ITCM
+
+	.ITCM.bss:
+	{
+	ALIGNALL(4);				. = ALIGN(32);
+						
+	#
+	#  BSS BLOCK
+	#
+	SDK_AUTOLOAD.ITCM.BSS_START	= .;
+						#:::::::::: bss
+						. = ALIGN(4);
+						. = ALIGN(4);
+						. = ALIGN(4);
+						* (.itcm.bss)
+						. = ALIGN(4);
+						#:::::::::: bss
+						. = ALIGN(32);
+	SDK_AUTOLOAD.ITCM.BSS_END	= .;
+
+	SDK_AUTOLOAD.ITCM.BSS_SIZE	= SDK_AUTOLOAD.ITCM.BSS_END - SDK_AUTOLOAD.ITCM.BSS_START;
+
+	} >> ITCM
+
+	.DTCM:
+	{
+	ALIGNALL(4);				. = ALIGN(32);
+						
+	#
+	#   TEXT BLOCK: READ ONLY
+	#
+	SDK_AUTOLOAD_DTCM_ID		=1;
+	SDK_AUTOLOAD.DTCM.ID		=1;
+	SDK_AUTOLOAD.DTCM.START	=.;
+	SDK_AUTOLOAD.DTCM.TEXT_START	=.;
+						#:::::::::: text/rodata
+						. = ALIGN(4);
+						. = ALIGN(4);
+						. = ALIGN(4);
+						#:::::::::: text/rodata
+	SDK_AUTOLOAD.DTCM.TEXT_END	=.;
+
+	#
+	#  DATA BLOCK: READ WRITE BLOCK
+	#
+	SDK_AUTOLOAD.DTCM.DATA_START	=.;
+						#:::::::::: data
+						. = ALIGN(4);
+						. = ALIGN(4);
+						* (.dtcm)
+						. = ALIGN(4);
+						#:::::::::: data
+						. = ALIGN(32);
+	SDK_AUTOLOAD.DTCM.DATA_END	=.;
+	SDK_AUTOLOAD.DTCM.END	=.;
+	
+	SDK_AUTOLOAD.DTCM.TEXT_SIZE	= SDK_AUTOLOAD.DTCM.TEXT_END - SDK_AUTOLOAD.DTCM.TEXT_START;
+	SDK_AUTOLOAD.DTCM.DATA_SIZE	= SDK_AUTOLOAD.DTCM.DATA_END - SDK_AUTOLOAD.DTCM.DATA_START;
+	SDK_AUTOLOAD.DTCM.SIZE	= SDK_AUTOLOAD.DTCM.END	- SDK_AUTOLOAD.DTCM.START;
+	SDK_AUTOLOAD_SIZE			= SDK_AUTOLOAD_SIZE + SDK_AUTOLOAD.DTCM.SIZE;
+
+	} > DTCM
+
+	.DTCM.bss:
+	{
+	ALIGNALL(4);				. = ALIGN(32);
+						
+	#
+	#  BSS BLOCK
+	#
+	SDK_AUTOLOAD.DTCM.BSS_START	= .;
+						#:::::::::: bss
+						. = ALIGN(4);
+						. = ALIGN(4);
+						* (.dtcm.bss)
+						. = ALIGN(4);
+						. = ALIGN(4);
+						#:::::::::: bss
+						. = ALIGN(32);
+	SDK_AUTOLOAD.DTCM.BSS_END	= .;
+
+	SDK_AUTOLOAD.DTCM.BSS_SIZE	= SDK_AUTOLOAD.DTCM.BSS_END - SDK_AUTOLOAD.DTCM.BSS_START;
+
+	} >> DTCM
+
+
+	SDK_AUTOLOAD_ITCM_START			= SDK_AUTOLOAD.ITCM.START;
+	SDK_AUTOLOAD_ITCM_END			= SDK_AUTOLOAD.ITCM.END;
+	SDK_AUTOLOAD_ITCM_BSS_END		= SDK_AUTOLOAD.ITCM.BSS_END;
+	SDK_AUTOLOAD_ITCM_SIZE			= SDK_AUTOLOAD.ITCM.SIZE;
+	SDK_AUTOLOAD_ITCM_BSS_SIZE		= SDK_AUTOLOAD.ITCM.BSS_SIZE;
+	SDK_AUTOLOAD_DTCM_START			= SDK_AUTOLOAD.DTCM.START;
+	SDK_AUTOLOAD_DTCM_END			= SDK_AUTOLOAD.DTCM.END;
+	SDK_AUTOLOAD_DTCM_BSS_END		= SDK_AUTOLOAD.DTCM.BSS_END;
+	SDK_AUTOLOAD_DTCM_SIZE			= SDK_AUTOLOAD.DTCM.SIZE;
+	SDK_AUTOLOAD_DTCM_BSS_SIZE		= SDK_AUTOLOAD.DTCM.BSS_SIZE;
+
+	############################ AUTOLOAD_INFO ##########################
+	.binary.AUTOLOAD_INFO:
+	{
+		WRITEW ADDR(.ITCM);
+		WRITEW SDK_AUTOLOAD.ITCM.SIZE;
+		WRITEW SDK_AUTOLOAD.ITCM.BSS_SIZE;
+		WRITEW ADDR(.DTCM);
+		WRITEW SDK_AUTOLOAD.DTCM.SIZE;
+		WRITEW SDK_AUTOLOAD.DTCM.BSS_SIZE;
+	} > binary.AUTOLOAD_INFO
+	
+	SDK_AUTOLOAD_LIST			= SDK_AUTOLOAD_START + SDK_AUTOLOAD_SIZE;
+	SDK_AUTOLOAD_LIST_END			= SDK_AUTOLOAD_START + SDK_AUTOLOAD_SIZE + SIZEOF(.binary.AUTOLOAD_INFO);
+	SDK_AUTOLOAD_SIZE			= SDK_AUTOLOAD_SIZE  + SIZEOF(.binary.AUTOLOAD_INFO);
+	
+	############################ STATIC_FOOTER ##########################
+	.binary.STATIC_FOOTER:
+	{
+		WRITEW 0xdec00621;		# LE(0x2106C0DE) = NITRO CODE
+		WRITEW _start_ModuleParams - ADDR(.main);
+		WRITEW 0;			# NO DIGEST
+	} > binary.STATIC_FOOTER
+	
+	############################ OVERLAYS ###############################
+	SDK_OVERLAY_NUMBER			= 0;
+
+	
+	############################ MAIN EX ##################################
+	# MAIN EX Area
+	.dummy.MAIN_EX:
+	{
+		. = ALIGN(32);
+	} > dummy.MAIN_EX
+	
+	############################ ARENA ##################################
+	.arena.MAIN:
+	{
+						. = ALIGN(32);
+		SDK_SECTION_ARENA_START		=.;
+	} > arena.MAIN
+	
+	.arena.MAIN_EX:
+	{
+						. = ALIGN(32);
+		SDK_SECTION_ARENA_EX_START	=.;
+	} > arena.MAIN_EX
+	
+	.arena.ITCM:
+	{
+						. = ALIGN(32);
+		SDK_SECTION_ARENA_ITCM_START	=.;
+	} > arena.ITCM
+
+	.arena.DTCM:
+	{
+						. = ALIGN(32);
+		SDK_SECTION_ARENA_DTCM_START	=.;
+	} > arena.DTCM
+	
+	############################ OVERLAYDEFS ############################
+	.main_defs:
+	{
+		###  main module information 
+		WRITEW ADDR(.main);			# load address
+		WRITEW _start;					# entry address
+		WRITEW SDK_STATIC_SIZE + SDK_AUTOLOAD_SIZE;	# size of module
+		WRITEW _start_AutoloadDoneCallback;		# callback autoload done
+		
+		###  overlay filename 
+	
+	} > main_defs
+
+
+	############################ OVERLAYTABLE ###########################
+	.main_table:
+	{
+		
+	} > main_table
+	
+	
+	############################ OTHERS #################################
+	SDK_MAIN_ARENA_LO = SDK_SECTION_ARENA_START;
+	SDK_IRQ_STACKSIZE = 1024;	# allocated in DTCM
+	SDK_SYS_STACKSIZE = 0;		# when 0 means all remains of DTCM
+	
+	# Module filelist
+	.binary.MODULE_FILES:
+	{
+		WRITES ("main.sbin");
+		WRITES ("main_defs.sbin");
+		WRITES ("main_table.sbin");
+	} > binary.MODULE_FILES
+
+	# ITCM/DTCM size checker => check AUTOLOAD_ITCM/DTCM
+	.check.ITCM:
+	{
+		. = . + SDK_AUTOLOAD_ITCM_SIZE + SDK_AUTOLOAD_ITCM_BSS_SIZE;
+	} > check.ITCM
+	
+	SDK_SYS_STACKSIZE_SIGN = (SDK_SYS_STACKSIZE < 0x80000000) * 2 - 1;
+	.check.DTCM:
+	{
+		. = . + SDK_AUTOLOAD_DTCM_SIZE + SDK_AUTOLOAD_DTCM_BSS_SIZE;
+		. = . + SDK_IRQ_STACKSIZE + SDK_SYS_STACKSIZE * SDK_SYS_STACKSIZE_SIGN;
+	} > check.DTCM
+
+}

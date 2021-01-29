@@ -1,0 +1,28 @@
+#	Auto-Generated Linker Command Script Spec File
+
+Static	main
+{
+	Address		0x02000000
+	Object		GROUP(ROOT)
+	StackSize	0	1024
+}
+
+Autoload	ITCM
+{
+	Address		0x01ff8000
+	Object		*	(.itcm)
+}
+
+Autoload	DTCM
+{
+	Address		0x027e0000
+	Object		*	(.dtcm)
+}
+
+Property
+{
+	OverlayDefs		%_defs
+	OverlayTable	%_table
+	Surffix			.sbin
+}
+

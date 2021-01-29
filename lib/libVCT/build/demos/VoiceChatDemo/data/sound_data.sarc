@@ -1,0 +1,31 @@
+;===================================================================
+;
+;  NITRO-Composer sample
+;
+;===================================================================
+
+;;;;;;;;;;;;;;;;;;;;;;
+;; Wave Archive
+@WAVEARC
+ @PATH "swar"
+WAVE_SE 	: AUTO, "se.swls"
+
+;;;;;;;;;;;;;;;;;;;;;;
+;; Bank
+@BANK
+ @PATH "bnk" 
+BANK_SE     : TEXT, "se.bnk",   WAVE_SE
+
+;;;;;;;;;;;;;;;;;;;;;;
+;; Player
+
+@PLAYER
+ PLAYER_VOICE : 1
+ 
+;;;;;;;;;;;;;;;;;;;;;;
+;; Sequence Archive
+
+@SEQARC
+ @PATH "mus"
+SEQ_SE  : TEXT, "se.mus"
+

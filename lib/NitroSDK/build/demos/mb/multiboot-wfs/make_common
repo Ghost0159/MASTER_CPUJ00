@@ -1,0 +1,60 @@
+#! make -f
+#----------------------------------------------------------------------------
+# Project:  Project:  NitroSDK - MB - demos - multiboot-wfs
+# File:     make_common
+#
+# Copyright 2005 Nintendo.  All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: make_common,v $
+# Revision 1.1  2005/06/23 09:05:22  yosizaki
+# initial upload.
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+
+
+
+# MBライブラリのサンプルはマルチブート機能を使うため、
+# 同じ通信環境(無線あるいは有線)どうしの開発機材を複数必要とします。
+# $NitroSDK/bin/ARM9-TS/Release/ ディレクトリにある
+# mb_child.bin プログラムが最終実機におけるマルチブート子機と同等の
+# 機能を提供するサンプルになっていますので、
+# このバイナリをサンプルプログラムと同じ方法で他の機材に読み込み、
+# 一緒に実行してください。
+
+
+#----------------------------------------------------------------------------
+
+
+NITRO_MAKEROM	=	TRUE
+NITRO_DIGEST	=	TRUE
+
+TARGET_BIN		=	main.srl
+LCFILE_SPEC		=	main.lsf
+
+SRCDIR			=	../common/src ./src
+INCDIR			=	../common/include ./include
+
+# デモのアプリケーションフレームワーク.
+SRCS			=	common.c util.c font.c
+
+# wc モジュールは wireless_shared へ移動しました。
+WC_DIR			=	$(ROOT)/build/demos/wireless_shared/wc
+SRCS			+=	$(WC_DIR)/wc.c
+LINCLUDES		=	$(WC_DIR)
+
+# 無線ファイルシステム (WFS) モジュールは wireless_shared へ移動しました。
+WFS_DIR			=	$(ROOT)/build/demos/wireless_shared/wfs
+SRCS			+=	$(WFS_DIR)/src/wfs_common.c	\
+					$(WFS_DIR)/src/wfs_archive.c	\
+					$(WFS_DIR)/src/wfs_thread.c
+LINCLUDES		+=	$(WFS_DIR)/include
+
+
+#===== End of make_common =====

@@ -1,0 +1,63 @@
+#----------------------------------------------------------------------------
+# Project:  NitroSDK - FS - demos - file-1
+# File:     main.rsf
+#
+# Copyright 2003-2005 Nintendo.  All rights reserved.
+#
+# These coded instructions, statements, and computer programs contain
+# proprietary information of Nintendo of America Inc. and/or Nintendo
+# Company Ltd., and are protected by Federal copyright law.  They may
+# not be disclosed to third parties or copied or duplicated in any form,
+# in whole or in part, without the prior written consent of Nintendo.
+#
+# $Log: main.rsf,v $
+# Revision 1.8  2005/04/05 12:16:10  yosizaki
+# support RomSpeedType parameter.
+#
+# Revision 1.7  2004/09/17 02:08:05  yosizaki
+# fix parameter ( COMPSUFFIX )
+#
+# Revision 1.6  2004/09/04 02:47:35  yosizaki
+# change to use default component(mongoose).
+#
+# Revision 1.5  2004/06/08 00:36:03  yasu
+# change ARM7 component idle -> ferret
+#
+# Revision 1.4  2004/04/13 12:08:41  yosizaki
+# fix header comment.
+#
+# Revision 1.3  2004/04/06 05:58:17  yasu
+# unite all rsf files to main.rsf
+#
+# $NoKeywords: $
+#----------------------------------------------------------------------------
+#
+#  Nitro ROM SPEC FILE
+#
+
+Arm9
+{
+	Static		"$(MAKEROM_ARM9:r).sbin$(COMPSUFFIX9)"
+	OverlayDefs	"$(MAKEROM_ARM9:r)_defs.sbin$(COMPSUFFIX9)"
+	OverlayTable	"$(MAKEROM_ARM9:r)_table.sbin$(COMPSUFFIX9)"
+	Elf		"$(MAKEROM_ARM9:r).nef"
+}
+
+Arm7
+{
+	Static		"$(MAKEROM_ARM7:r).sbin$(COMPSUFFIX7)"
+	OverlayDefs	"$(MAKEROM_ARM7:r)_defs.sbin$(COMPSUFFIX7)"
+	OverlayTable	"$(MAKEROM_ARM7:r)_table.sbin$(COMPSUFFIX7)"
+	Elf		"$(MAKEROM_ARM7:r).nef"
+}
+
+Property
+{
+  RomSpeedType  $(MAKEROM_ROMSPEED)
+}
+
+RomSpec
+{
+	Offset		0x00000000
+	Segment		ALL
+}

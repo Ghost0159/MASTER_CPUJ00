@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<imd version="1.4.0">
+
+<head>
+	<create user="nishida_kenji" host="NISHIDAK-WIN" date="2004-07-21T10:22:49" source="cmn_tex_cube1.mb"/>
+	<title>Model Data for NINTENDO NITRO-System</title>
+	<generator name="Maya 5.0.1 NNS_Export" version="1.4.0"/>
+</head>
+
+<body>
+
+<model_info
+	pos_scale="0"
+	scaling_rule="standard"
+	vertex_style="direct"
+	magnify="1.000000"
+	tool_start_frame="1"
+	tex_matrix_mode="maya"
+	compress_node="merge" node_size="1 1"
+	compress_material="on" material_size="6 6"
+	output_texture="used"
+	force_full_weight="on"
+	use_primitive_strip="on"
+/>
+
+<box_test pos_scale="0" xyz="-0.500000 -0.500000 0.500000" whd="1.000000 1.000000 1.000000"/>
+
+<tex_image_array size="6">
+	<tex_image index="0" name="dice_five"
+		width="64" height="64" original_width="64" original_height="64"
+		format="palette16"
+		color0_mode="color"
+		palette_name="dice_pl"
+		path="D:/data/maya_data/NNS_3DLib_sample_maya/sourceimages/dice_five.pic"
+	>
+		<bitmap size="1024">
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 67aa 2023 a763 aaaa aaaa aaaa
+			aaaa aaaa aaaa 67aa 2023 a763 aaaa aaaa
+			aaaa aaaa 0159 0000 5100 aaa9 aaaa aaaa
+			aaaa aaaa aaaa 0159 0000 5100 aaa9 aaaa
+			aaaa 8aaa 0004 0000 0000 aa84 aaaa aaaa
+			aaaa aaaa 8aaa 0004 0000 0000 aa84 aaaa
+			aaaa 49aa 0000 0000 0000 a940 aaaa aaaa
+			aaaa aaaa 49aa 0000 0000 0000 a940 aaaa
+			aaaa 05aa 0000 0000 0000 a500 aaaa aaaa
+			aaaa aaaa 05aa 0000 0000 0000 a500 aaaa
+			aaaa 017a 0000 0000 0000 7100 aaaa aaaa
+			aaaa aaaa 017a 0000 0000 0000 7100 aaaa
+			aaaa 006a 0000 0000 0000 6000 aaaa aaaa
+			aaaa aaaa 006a 0000 0000 0000 6000 aaaa
+			aaaa 003a 0000 0000 0000 3000 aaaa aaaa
+			aaaa aaaa 003a 0000 0000 0000 3000 aaaa
+			aaaa 002a 0000 0000 0000 2000 aaaa aaaa
+			aaaa aaaa 002a 0000 0000 0000 2000 aaaa
+			aaaa 000a 0000 0000 0000 0000 aaaa aaaa
+			aaaa aaaa 000a 0000 0000 0000 0000 aaaa
+			aaaa 002a 0000 0000 0000 2000 aaaa aaaa
+			aaaa aaaa 002a 0000 0000 0000 2000 aaaa
+			aaaa 003a 0000 0000 0000 3000 aaaa aaaa
+			aaaa aaaa 003a 0000 0000 0000 3000 aaaa
+			aaaa 006a 0000 0000 0000 6000 aaaa aaaa
+			aaaa aaaa 006a 0000 0000 0000 6000 aaaa
+			aaaa 017a 0000 0000 0000 7100 aaaa aaaa
+			aaaa aaaa 017a 0000 0000 0000 7100 aaaa
+			aaaa 05aa 0000 0000 0000 a500 aaaa aaaa
+			aaaa aaaa 05aa 0000 0000 0000 a500 aaaa
+			aaaa 49aa 0000 0000 0000 a940 aaaa aaaa
+			aaaa aaaa 49aa 0000 0000 0000 a940 aaaa
+			aaaa 8aaa 0004 0000 0000 aa84 aaaa aaaa
+			aaaa aaaa 8aaa 0004 0000 0000 aa84 aaaa
+			aaaa aaaa 0159 0000 5100 aaa9 aaaa 2367
+			6320 aaa7 aaaa 0159 0000 5100 aaa9 aaaa
+			aaaa aaaa 67aa 2023 a763 aaaa 59aa 0001
+			0000 a951 aaaa 67aa 2023 a763 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 048a 0000
+			0000 8400 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 0049 0000
+			0000 4000 aaa9 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 0005 0000
+			0000 0000 aaa5 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 7aaa 0001 0000
+			0000 0000 aa71 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 6aaa 0000 0000
+			0000 0000 aa60 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 3aaa 0000 0000
+			0000 0000 aa30 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 2aaa 0000 0000
+			0000 0000 aa20 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 0aaa 0000 0000
+			0000 0000 aa00 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 2aaa 0000 0000
+			0000 0000 aa20 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 3aaa 0000 0000
+			0000 0000 aa30 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 6aaa 0000 0000
+			0000 0000 aa60 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 7aaa 0001 0000
+			0000 0000 aa71 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 0005 0000
+			0000 0000 aaa5 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 0049 0000
+			0000 4000 aaa9 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 048a 0000
+			0000 8400 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 67aa 2023 a763 aaaa 59aa 0001
+			0000 a951 aaaa 67aa 2023 a763 aaaa aaaa
+			aaaa aaaa 0159 0000 5100 aaa9 aaaa 2367
+			6320 aaa7 aaaa 0159 0000 5100 aaa9 aaaa
+			aaaa 8aaa 0004 0000 0000 aa84 aaaa aaaa
+			aaaa aaaa 8aaa 0004 0000 0000 aa84 aaaa
+			aaaa 49aa 0000 0000 0000 a940 aaaa aaaa
+			aaaa aaaa 49aa 0000 0000 0000 a940 aaaa
+			aaaa 05aa 0000 0000 0000 a500 aaaa aaaa
+			aaaa aaaa 05aa 0000 0000 0000 a500 aaaa
+			aaaa 017a 0000 0000 0000 7100 aaaa aaaa
+			aaaa aaaa 017a 0000 0000 0000 7100 aaaa
+			aaaa 006a 0000 0000 0000 6000 aaaa aaaa
+			aaaa aaaa 006a 0000 0000 0000 6000 aaaa
+			aaaa 003a 0000 0000 0000 3000 aaaa aaaa
+			aaaa aaaa 003a 0000 0000 0000 3000 aaaa
+			aaaa 002a 0000 0000 0000 2000 aaaa aaaa
+			aaaa aaaa 002a 0000 0000 0000 2000 aaaa
+			aaaa 000a 0000 0000 0000 0000 aaaa aaaa
+			aaaa aaaa 000a 0000 0000 0000 0000 aaaa
+			aaaa 002a 0000 0000 0000 2000 aaaa aaaa
+			aaaa aaaa 002a 0000 0000 0000 2000 aaaa
+			aaaa 003a 0000 0000 0000 3000 aaaa aaaa
+			aaaa aaaa 003a 0000 0000 0000 3000 aaaa
+			aaaa 006a 0000 0000 0000 6000 aaaa aaaa
+			aaaa aaaa 006a 0000 0000 0000 6000 aaaa
+			aaaa 017a 0000 0000 0000 7100 aaaa aaaa
+			aaaa aaaa 017a 0000 0000 0000 7100 aaaa
+			aaaa 05aa 0000 0000 0000 a500 aaaa aaaa
+			aaaa aaaa 05aa 0000 0000 0000 a500 aaaa
+			aaaa 49aa 0000 0000 0000 a940 aaaa aaaa
+			aaaa aaaa 49aa 0000 0000 0000 a940 aaaa
+			aaaa 8aaa 0004 0000 0000 aa84 aaaa aaaa
+			aaaa aaaa 8aaa 0004 0000 0000 aa84 aaaa
+			aaaa aaaa 0159 0000 5100 aaa9 aaaa aaaa
+			aaaa aaaa aaaa 0159 0000 5100 aaa9 aaaa
+			aaaa aaaa 67aa 2023 a763 aaaa aaaa aaaa
+			aaaa aaaa aaaa 67aa 2023 a763 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+		</bitmap>
+	</tex_image>
+	<tex_image index="1" name="dice_four"
+		width="64" height="64" original_width="64" original_height="64"
+		format="palette16"
+		color0_mode="color"
+		palette_name="dice_pl"
+		path="D:/data/maya_data/NNS_3DLib_sample_maya/sourceimages/dice_four.pic"
+	>
+		<bitmap size="1024">
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+		</bitmap>
+	</tex_image>
+	<tex_image index="2" name="dice_one"
+		width="64" height="64" original_width="64" original_height="64"
+		format="palette16"
+		color0_mode="color"
+		palette_name="dice_one_pl"
+		path="D:/data/maya_data/NNS_3DLib_sample_maya/sourceimages/dice_one.pic"
+	>
+		<bitmap size="1024">
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb 57ab 0013
+			7531 bbba bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb 9bbb 0015 0000
+			0000 b951 bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb 16ab 0000 0000
+			0000 6100 bbba bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb 0049 0000 0000
+			0000 0000 bb94 bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 8bbb 0002 0000 0000
+			0000 0000 b820 bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 29bb 0000 0000 0000
+			0000 0000 9200 bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 04ab 0000 0000 0000
+			0000 0000 4000 bbba bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 006b 0000 0000 0000
+			0000 0000 0000 bbb6 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 0019 0000 0000 0000
+			0000 0000 0000 bb91 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 0005 0000 0000 0000
+			0000 0000 0000 bb50 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb abbb 0001 0000 0000 0000
+			0000 0000 0000 ba10 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 7bbb 0000 0000 0000 0000
+			0000 0000 0000 b700 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 5bbb 0000 0000 0000 0000
+			0000 0000 0000 b500 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 3bbb 0000 0000 0000 0000
+			0000 0000 0000 b300 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 1bbb 0000 0000 0000 0000
+			0000 0000 0000 b100 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 0bbb 0000 0000 0000 0000
+			0000 0000 0000 b000 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 0bbb 0000 0000 0000 0000
+			0000 0000 0000 b000 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 1bbb 0000 0000 0000 0000
+			0000 0000 0000 b100 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 3bbb 0000 0000 0000 0000
+			0000 0000 0000 b300 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 5bbb 0000 0000 0000 0000
+			0000 0000 0000 b500 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb 7bbb 0000 0000 0000 0000
+			0000 0000 0000 b700 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb abbb 0001 0000 0000 0000
+			0000 0000 0000 ba10 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 0005 0000 0000 0000
+			0000 0000 0000 bb50 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 0019 0000 0000 0000
+			0000 0000 0000 bb91 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 006b 0000 0000 0000
+			0000 0000 0000 bbb6 bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 04ab 0000 0000 0000
+			0000 0000 4000 bbba bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 29bb 0000 0000 0000
+			0000 0000 9200 bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb 8bbb 0002 0000 0000
+			0000 0000 b820 bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb 0049 0000 0000
+			0000 0000 bb94 bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb 16ab 0000 0000
+			0000 6100 bbba bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb 9bbb 0015 0000
+			0000 b951 bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb 57ab 0013
+			7531 bbba bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+			bbbb bbbb bbbb bbbb bbbb bbbb bbbb bbbb
+		</bitmap>
+	</tex_image>
+	<tex_image index="3" name="dice_six"
+		width="64" height="64" original_width="64" original_height="64"
+		format="palette16"
+		color0_mode="color"
+		palette_name="dice_pl"
+		path="D:/data/maya_data/NNS_3DLib_sample_maya/sourceimages/dice_six.pic"
+	>
+		<bitmap size="1024">
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 7aaa 0236 7632 aaaa aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 159a 0000 1000 aa95 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0048 0000 0000 a840 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa 9aaa 0004 0000 0000 9400 aaaa aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 5aaa 0000 0000 0000 5000 aaaa aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 17aa 0000 0000 0000 1000 aaa7 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 06aa 0000 0000 0000 0000 aaa6 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 03aa 0000 0000 0000 0000 aaa3 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 02aa 0000 0000 0000 0000 aaa2 aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa 00aa 0000 0000 0000 0000 aaa0 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 02aa 0000 0000 0000 0000 aaa2 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 03aa 0000 0000 0000 0000 aaa3 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 06aa 0000 0000 0000 0000 aaa6 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 17aa 0000 0000 0000 1000 aaa7 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 5aaa 0000 0000 0000 5000 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa 9aaa 0004 0000 0000 9400 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0048 0000 0000 a840 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 159a 0000 1000 aa95 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 7aaa 0236 7632 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 7aaa 0236 7632 aaaa aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 159a 0000 1000 aa95 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0048 0000 0000 a840 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa 9aaa 0004 0000 0000 9400 aaaa aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 5aaa 0000 0000 0000 5000 aaaa aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 17aa 0000 0000 0000 1000 aaa7 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 06aa 0000 0000 0000 0000 aaa6 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 03aa 0000 0000 0000 0000 aaa3 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 02aa 0000 0000 0000 0000 aaa2 aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa 00aa 0000 0000 0000 0000 aaa0 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 02aa 0000 0000 0000 0000 aaa2 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 03aa 0000 0000 0000 0000 aaa3 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 06aa 0000 0000 0000 0000 aaa6 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 17aa 0000 0000 0000 1000 aaa7 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 5aaa 0000 0000 0000 5000 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa 9aaa 0004 0000 0000 9400 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0048 0000 0000 a840 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 159a 0000 1000 aa95 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 7aaa 0236 7632 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 7aaa 0236 7632 aaaa aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 159a 0000 1000 aa95 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0048 0000 0000 a840 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa 9aaa 0004 0000 0000 9400 aaaa aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 5aaa 0000 0000 0000 5000 aaaa aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 17aa 0000 0000 0000 1000 aaa7 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 06aa 0000 0000 0000 0000 aaa6 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 03aa 0000 0000 0000 0000 aaa3 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 02aa 0000 0000 0000 0000 aaa2 aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa 00aa 0000 0000 0000 0000 aaa0 aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa 02aa 0000 0000 0000 0000 aaa2 aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa 03aa 0000 0000 0000 0000 aaa3 aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa 06aa 0000 0000 0000 0000 aaa6 aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa 17aa 0000 0000 0000 1000 aaa7 aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa 5aaa 0000 0000 0000 5000 aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa 9aaa 0004 0000 0000 9400 aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa 0048 0000 0000 a840 aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa 159a 0000 1000 aa95 aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa 7aaa 0236 7632 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+		</bitmap>
+	</tex_image>
+	<tex_image index="4" name="dice_three"
+		width="64" height="64" original_width="64" original_height="64"
+		format="palette16"
+		color0_mode="color"
+		palette_name="dice_pl"
+		path="D:/data/maya_data/NNS_3DLib_sample_maya/sourceimages/dice_three.pic"
+	>
+		<bitmap size="1024">
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 67aa 2023 a763 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 0159 0000 5100 aaa9 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 8aaa 0004 0000 0000 aa84 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 49aa 0000 0000 0000 a940 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 05aa 0000 0000 0000 a500 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 017a 0000 0000 0000 7100 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 006a 0000 0000 0000 6000 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 003a 0000 0000 0000 3000 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 002a 0000 0000 0000 2000 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 000a 0000 0000 0000 0000 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 002a 0000 0000 0000 2000 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 003a 0000 0000 0000 3000 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 006a 0000 0000 0000 6000 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 017a 0000 0000 0000 7100 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 05aa 0000 0000 0000 a500 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 49aa 0000 0000 0000 a940 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 8aaa 0004 0000 0000 aa84 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 0159 0000 5100 aaa9 7aaa 0236
+			7632 aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 67aa 2023 a763 aaaa 159a 0000
+			1000 aa95 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 0048 0000
+			0000 a840 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 9aaa 0004 0000
+			0000 9400 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 5aaa 0000 0000
+			0000 5000 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 17aa 0000 0000
+			0000 1000 aaa7 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 06aa 0000 0000
+			0000 0000 aaa6 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 03aa 0000 0000
+			0000 0000 aaa3 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 02aa 0000 0000
+			0000 0000 aaa2 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 00aa 0000 0000
+			0000 0000 aaa0 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 02aa 0000 0000
+			0000 0000 aaa2 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 03aa 0000 0000
+			0000 0000 aaa3 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 06aa 0000 0000
+			0000 0000 aaa6 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 17aa 0000 0000
+			0000 1000 aaa7 aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 5aaa 0000 0000
+			0000 5000 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa 9aaa 0004 0000
+			0000 9400 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 0048 0000
+			0000 a840 aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 159a 0000
+			1000 aa95 aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa 7aaa 0236
+			7632 aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 0aaa 0000 0000 0000 0000 aa00 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 2aaa 0000 0000 0000 0000 aa20 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 3aaa 0000 0000 0000 0000 aa30 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 6aaa 0000 0000 0000 0000 aa60 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 7aaa 0001 0000 0000 0000 aa71 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 0005 0000 0000 0000 aaa5 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 0049 0000 0000 4000 aaa9 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 048a 0000 0000 8400 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 59aa 0001 0000 a951 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 2367 6320 aaa7 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+		</bitmap>
+	</tex_image>
+	<tex_image index="5" name="dice_two"
+		width="64" height="64" original_width="64" original_height="64"
+		format="palette16"
+		color0_mode="color"
+		palette_name="dice_pl"
+		path="D:/data/maya_data/NNS_3DLib_sample_maya/sourceimages/dice_two.pic"
+	>
+		<bitmap size="1024">
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa 2367 6320 aaa7 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 59aa 0001 0000 a951 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 048a 0000 0000 8400 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 0049 0000 0000 4000 aaa9
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 0005 0000 0000 0000 aaa5
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 7aaa 0001 0000 0000 0000 aa71
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 6aaa 0000 0000 0000 0000 aa60
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 3aaa 0000 0000 0000 0000 aa30
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 2aaa 0000 0000 0000 0000 aa20
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 0aaa 0000 0000 0000 0000 aa00
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 2aaa 0000 0000 0000 0000 aa20
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 3aaa 0000 0000 0000 0000 aa30
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 6aaa 0000 0000 0000 0000 aa60
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa 7aaa 0001 0000 0000 0000 aa71
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 0005 0000 0000 0000 aaa5
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 0049 0000 0000 4000 aaa9
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 048a 0000 0000 8400 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa 59aa 0001 0000 a951 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa 2367 6320 aaa7 aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 7aaa 0236 7632 aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 159a 0000 1000 aa95 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 0048 0000 0000 a840 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			9aaa 0004 0000 0000 9400 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			5aaa 0000 0000 0000 5000 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			17aa 0000 0000 0000 1000 aaa7 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			06aa 0000 0000 0000 0000 aaa6 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			03aa 0000 0000 0000 0000 aaa3 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			02aa 0000 0000 0000 0000 aaa2 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			00aa 0000 0000 0000 0000 aaa0 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			02aa 0000 0000 0000 0000 aaa2 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			03aa 0000 0000 0000 0000 aaa3 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			06aa 0000 0000 0000 0000 aaa6 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			17aa 0000 0000 0000 1000 aaa7 aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			5aaa 0000 0000 0000 5000 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			9aaa 0004 0000 0000 9400 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 0048 0000 0000 a840 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 159a 0000 1000 aa95 aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa 7aaa 0236 7632 aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+			aaaa aaaa aaaa aaaa aaaa aaaa aaaa aaaa
+		</bitmap>
+	</tex_image>
+</tex_image_array>
+
+<tex_palette_array size="2">
+	<tex_palette index="0" name="dice_one_pl" color_size="16">
+		001f 0c7f 18df 1cff 253f 35bf 3dff 4e7f
+		5adf 5eff 6f7f 7fff 7fff 7fff 7fff 7fff
+	</tex_palette>
+	<tex_palette index="1" name="dice_pl" color_size="16">
+		0000 0842 0c63 2529 294a 3def 4210 6318
+		6739 6f7b 7fff 7fff 7fff 7fff 7fff 7fff
+	</tex_palette>
+</tex_palette_array>
+
+<material_array size="6">
+	<material index="0" name="lambert2"
+		light0="off" light1="off" light2="off" light3="off"
+		face="front"
+		alpha="31"
+		wire_mode="off"
+		polygon_mode="modulate"
+		polygon_id="0"
+		fog_flag="off"
+		diffuse="31 31 31"
+		ambient="0 0 0"
+		specular="0 0 0"
+		emission="0 0 0"
+		shininess_table_flag="off"
+		tex_image_idx="2" tex_palette_idx="0"
+		tex_tiling="repeat repeat"
+		tex_scale="1.000000 1.000000"
+		tex_rotate="0.000000"
+		tex_translate="0.000000 0.000000"
+		tex_gen_mode="none"
+	/>
+	<material index="1" name="lambert3"
+		light0="off" light1="off" light2="off" light3="off"
+		face="front"
+		alpha="31"
+		wire_mode="off"
+		polygon_mode="modulate"
+		polygon_id="0"
+		fog_flag="off"
+		diffuse="31 31 31"
+		ambient="0 0 0"
+		specular="0 0 0"
+		emission="0 0 0"
+		shininess_table_flag="off"
+		tex_image_idx="5" tex_palette_idx="1"
+		tex_tiling="repeat repeat"
+		tex_scale="1.000000 1.000000"
+		tex_rotate="0.000000"
+		tex_translate="0.000000 0.000000"
+		tex_gen_mode="none"
+	/>
+	<material index="2" name="lambert4"
+		light0="off" light1="off" light2="off" light3="off"
+		face="front"
+		alpha="31"
+		wire_mode="off"
+		polygon_mode="modulate"
+		polygon_id="0"
+		fog_flag="off"
+		diffuse="31 31 31"
+		ambient="0 0 0"
+		specular="0 0 0"
+		emission="0 0 0"
+		shininess_table_flag="off"
+		tex_image_idx="4" tex_palette_idx="1"
+		tex_tiling="repeat repeat"
+		tex_scale="1.000000 1.000000"
+		tex_rotate="0.000000"
+		tex_translate="0.000000 0.000000"
+		tex_gen_mode="none"
+	/>
+	<material index="3" name="lambert5"
+		light0="off" light1="off" light2="off" light3="off"
+		face="front"
+		alpha="31"
+		wire_mode="off"
+		polygon_mode="modulate"
+		polygon_id="0"
+		fog_flag="off"
+		diffuse="31 31 31"
+		ambient="0 0 0"
+		specular="0 0 0"
+		emission="0 0 0"
+		shininess_table_flag="off"
+		tex_image_idx="1" tex_palette_idx="1"
+		tex_tiling="repeat repeat"
+		tex_scale="1.000000 1.000000"
+		tex_rotate="0.000000"
+		tex_translate="0.000000 0.000000"
+		tex_gen_mode="none"
+	/>
+	<material index="4" name="lambert6"
+		light0="off" light1="off" light2="off" light3="off"
+		face="front"
+		alpha="31"
+		wire_mode="off"
+		polygon_mode="modulate"
+		polygon_id="0"
+		fog_flag="off"
+		diffuse="31 31 31"
+		ambient="0 0 0"
+		specular="0 0 0"
+		emission="0 0 0"
+		shininess_table_flag="off"
+		tex_image_idx="0" tex_palette_idx="1"
+		tex_tiling="repeat repeat"
+		tex_scale="1.000000 1.000000"
+		tex_rotate="0.000000"
+		tex_translate="0.000000 0.000000"
+		tex_gen_mode="none"
+	/>
+	<material index="5" name="lambert7"
+		light0="off" light1="off" light2="off" light3="off"
+		face="front"
+		alpha="31"
+		wire_mode="off"
+		polygon_mode="modulate"
+		polygon_id="0"
+		fog_flag="off"
+		diffuse="31 31 31"
+		ambient="0 0 0"
+		specular="0 0 0"
+		emission="0 0 0"
+		shininess_table_flag="off"
+		tex_image_idx="3" tex_palette_idx="1"
+		tex_tiling="repeat repeat"
+		tex_scale="1.000000 1.000000"
+		tex_rotate="0.000000"
+		tex_translate="0.000000 0.000000"
+		tex_gen_mode="none"
+	/>
+</material_array>
+
+<matrix_array size="1">
+	<matrix index="0" mtx_weight="1" node_idx="0"/>
+</matrix_array>
+
+<polygon_array size="6">
+	<polygon index="0" name="polygon0"
+		vertex_size="4" polygon_size="1"
+		triangle_size="0" quad_size="1"
+		volume_min="-0.500000 0.500000 -0.500000"
+		volume_max="0.500000 0.500000 0.500000"
+		volume_r="0.865967"
+		mtx_prim_size="1"
+		nrm_flag="off" clr_flag="off" tex_flag="on"
+	>
+		<mtx_prim index="0">
+			<mtx_list size="1">0</mtx_list>
+			<primitive_array size="1">
+				<primitive index="0" type="quads" vertex_size="4">
+					<mtx idx="0"/>
+					<tex st="0.000000 0.000000"/>
+					<pos_s xyz="-0.500000 0.500000 0.500000"/>
+					<tex st="64.000000 0.000000"/>
+					<pos_xy xy="0.500000 0.500000"/>
+					<tex st="64.000000 -64.000000"/>
+					<pos_xz xz="0.500000 -0.500000"/>
+					<tex st="0.000000 -64.000000"/>
+					<pos_xy xy="-0.500000 0.500000"/>
+				</primitive>
+			</primitive_array>
+		</mtx_prim>
+	</polygon>
+	<polygon index="1" name="polygon1"
+		vertex_size="4" polygon_size="1"
+		triangle_size="0" quad_size="1"
+		volume_min="-0.500000 -0.500000 -0.500000"
+		volume_max="0.500000 -0.500000 0.500000"
+		volume_r="0.865967"
+		mtx_prim_size="1"
+		nrm_flag="off" clr_flag="off" tex_flag="on"
+	>
+		<mtx_prim index="0">
+			<mtx_list size="1">0</mtx_list>
+			<primitive_array size="1">
+				<primitive index="0" type="quads" vertex_size="4">
+					<mtx idx="0"/>
+					<tex st="0.000000 -128.000000"/>
+					<pos_s xyz="-0.500000 -0.500000 -0.500000"/>
+					<tex st="64.000000 -128.000000"/>
+					<pos_xy xy="0.500000 -0.500000"/>
+					<tex st="64.000000 -192.000000"/>
+					<pos_xz xz="0.500000 0.500000"/>
+					<tex st="0.000000 -192.000000"/>
+					<pos_xy xy="-0.500000 -0.500000"/>
+				</primitive>
+			</primitive_array>
+		</mtx_prim>
+	</polygon>
+	<polygon index="2" name="polygon2"
+		vertex_size="4" polygon_size="1"
+		triangle_size="0" quad_size="1"
+		volume_min="-0.500000 -0.500000 0.500000"
+		volume_max="0.500000 0.500000 0.500000"
+		volume_r="0.865967"
+		mtx_prim_size="1"
+		nrm_flag="off" clr_flag="off" tex_flag="on"
+	>
+		<mtx_prim index="0">
+			<mtx_list size="1">0</mtx_list>
+			<primitive_array size="1">
+				<primitive index="0" type="quads" vertex_size="4">
+					<mtx idx="0"/>
+					<tex st="0.000000 64.000000"/>
+					<pos_s xyz="-0.500000 -0.500000 0.500000"/>
+					<tex st="64.000000 64.000000"/>
+					<pos_xy xy="0.500000 -0.500000"/>
+					<tex st="64.000000 0.000000"/>
+					<pos_xy xy="0.500000 0.500000"/>
+					<tex st="0.000000 0.000000"/>
+					<pos_xy xy="-0.500000 0.500000"/>
+				</primitive>
+			</primitive_array>
+		</mtx_prim>
+	</polygon>
+	<polygon index="3" name="polygon3"
+		vertex_size="4" polygon_size="1"
+		triangle_size="0" quad_size="1"
+		volume_min="-0.500000 -0.500000 -0.500000"
+		volume_max="0.500000 0.500000 -0.500000"
+		volume_r="0.865967"
+		mtx_prim_size="1"
+		nrm_flag="off" clr_flag="off" tex_flag="on"
+	>
+		<mtx_prim index="0">
+			<mtx_list size="1">0</mtx_list>
+			<primitive_array size="1">
+				<primitive index="0" type="quads" vertex_size="4">
+					<mtx idx="0"/>
+					<tex st="0.000000 -64.000000"/>
+					<pos_s xyz="-0.500000 0.500000 -0.500000"/>
+					<tex st="64.000000 -64.000000"/>
+					<pos_xy xy="0.500000 0.500000"/>
+					<tex st="64.000000 -128.000000"/>
+					<pos_xy xy="0.500000 -0.500000"/>
+					<tex st="0.000000 -128.000000"/>
+					<pos_xy xy="-0.500000 -0.500000"/>
+				</primitive>
+			</primitive_array>
+		</mtx_prim>
+	</polygon>
+	<polygon index="4" name="polygon4"
+		vertex_size="4" polygon_size="1"
+		triangle_size="0" quad_size="1"
+		volume_min="0.500000 -0.500000 -0.500000"
+		volume_max="0.500000 0.500000 0.500000"
+		volume_r="0.865967"
+		mtx_prim_size="1"
+		nrm_flag="off" clr_flag="off" tex_flag="on"
+	>
+		<mtx_prim index="0">
+			<mtx_list size="1">0</mtx_list>
+			<primitive_array size="1">
+				<primitive index="0" type="quads" vertex_size="4">
+					<mtx idx="0"/>
+					<tex st="64.000000 64.000000"/>
+					<pos_s xyz="0.500000 -0.500000 0.500000"/>
+					<tex st="128.000000 64.000000"/>
+					<pos_xz xz="0.500000 -0.500000"/>
+					<tex st="128.000000 0.000000"/>
+					<pos_xy xy="0.500000 0.500000"/>
+					<tex st="64.000000 0.000000"/>
+					<pos_xz xz="0.500000 0.500000"/>
+				</primitive>
+			</primitive_array>
+		</mtx_prim>
+	</polygon>
+	<polygon index="5" name="polygon5"
+		vertex_size="4" polygon_size="1"
+		triangle_size="0" quad_size="1"
+		volume_min="-0.500000 -0.500000 -0.500000"
+		volume_max="-0.500000 0.500000 0.500000"
+		volume_r="0.865967"
+		mtx_prim_size="1"
+		nrm_flag="off" clr_flag="off" tex_flag="on"
+	>
+		<mtx_prim index="0">
+			<mtx_list size="1">0</mtx_list>
+			<primitive_array size="1">
+				<primitive index="0" type="quads" vertex_size="4">
+					<mtx idx="0"/>
+					<tex st="-64.000000 64.000000"/>
+					<pos_s xyz="-0.500000 -0.500000 -0.500000"/>
+					<tex st="0.000000 64.000000"/>
+					<pos_xz xz="-0.500000 0.500000"/>
+					<tex st="0.000000 0.000000"/>
+					<pos_xy xy="-0.500000 0.500000"/>
+					<tex st="-64.000000 0.000000"/>
+					<pos_xz xz="-0.500000 -0.500000"/>
+				</primitive>
+			</primitive_array>
+		</mtx_prim>
+	</polygon>
+</polygon_array>
+
+<node_array size="1">
+	<node index="0" name="pCube1" kind="mesh"
+		parent="-1"
+		child="-1"
+		brother_next="-1"
+		brother_prev="-1"
+		draw_mtx="on"
+		scale_compensate="off"
+		billboard="off"
+		scale="1.000000 1.000000 1.000000"
+		rotate="0.000000 0.000000 0.000000"
+		translate="0.000000 0.000000 0.000000"
+		visibility="on"
+		display_size="6"
+		vertex_size="24" polygon_size="6"
+		triangle_size="0" quad_size="6"
+		volume_min="-0.500000 -0.500000 -0.500000"
+		volume_max="0.500000 0.500000 0.500000"
+		volume_r="0.865967"
+	>
+		<display index="0" material="0" polygon="0"/>
+		<display index="1" material="1" polygon="2"/>
+		<display index="2" material="2" polygon="5"/>
+		<display index="3" material="3" polygon="4"/>
+		<display index="4" material="4" polygon="3"/>
+		<display index="5" material="5" polygon="1"/>
+	</node>
+</node_array>
+
+<output_info vertex_size="24" polygon_size="6"
+	triangle_size="0" quad_size="6"/>
+
+</body>
+
+</imd>

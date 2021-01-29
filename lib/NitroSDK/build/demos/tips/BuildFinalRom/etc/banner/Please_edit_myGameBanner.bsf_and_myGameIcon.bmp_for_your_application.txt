@@ -1,0 +1,8 @@
+----------------------------------------------------------------------------
+ICON IMAGE:
+  Edit myGameIcon.bmp for your icon, and save it in 16colors bmp format.
+
+BANNER DESCRIPTIONS:
+  Use multi-charset editor to create your myGameBanner.bsf.
+  Bsf file should be saved in UTF-16LE format.
+----------------------------------------------------------------------------

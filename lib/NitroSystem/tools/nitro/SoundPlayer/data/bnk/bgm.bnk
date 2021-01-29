@@ -1,0 +1,51 @@
+
+@PATH "../aif"
+
+@INSTLIST
+   0 : KEY_SPLIT, _SLAPBASS
+   1 : ADPCM, "organ.b4.aiff", bn4, 127,127,127,121
+   2 : ADPCM, "organ.b4.aiff", bn4, 127,127,127,121
+   3 : KEY_SPLIT, _ORGAN_DET01
+   4 : KEY_SPLIT, _ORGAN_DET02
+   5 : ADPCM, "strings.ds5.aiff", ds5, 127,127,127,98
+   6 : ADPCM, "starbell.e6.aiff", en6, 127,127,127,98
+   7 : KEY_SPLIT, _PIANO
+  11 : KEY_SPLIT, _HIHAT
+  12 : ADPCM, "cabasa.aiff", fs4, 127,127,127,118
+ 127 : DRUM_SET, _DRUM_SET
+
+
+@DRUM_SET
+
+_DRUM_SET =
+cn2 : ADPCM, "bassdrum.aiff" ,    , 127,127,127,118,64
+en2 : ADPCM, "snare.aiff",        , 127,127,127,118,64
+cs3 : ADPCM, "cym_crash.aiff" ,cn3, 127,127,127,118,34
+en3 : ADPCM, "cym_crash.aiff" ,   , 127,127,127,118,94
+gn3 : ADPCM, "cym_splash.aiff" ,  , 127,127,127,118,54
+fn4 : ADPCM, "timbale_h.aiff" ,   , 127,127,127,118,55
+
+
+@KEY_SPLIT
+
+_SLAPBASS =
+bn3 : ADPCM, "bass_slpthm.e2.aiff", en2, 127,127,127,121
+127 : ADPCM, "bass_pull.e2.aiff",   en4, 127,127,127,121
+
+_ORGAN_DET01 =
+ds4 : ADPCM, "organ_det.g3.aiff", gn3, 127,127,127,123
+127 : ADPCM, "organ_det.g4.aiff", gn4, 127,127,127,123
+
+_ORGAN_DET02 =
+ds4 : ADPCM, "organ_det.g3.aiff", gn3, 127,127,127,123
+127 : ADPCM, "organ_det.g4.aiff", gn4, 127,127,127,123
+
+_PIANO =
+bn5 : ADPCM, "piano.g5.aiff", gn5, 127,127,127,98
+127 : ADPCM, "piano.g6.aiff", gn6, 127,127,127,98
+
+_HIHAT =
+gn2 : ADPCM, "hhcl.fs2.aiff", fs2, 127,127,127,121
+an2 : ADPCM, "hhpd.gs2.aiff", gs2, 127,127,127,121
+127 : ADPCM, "hhop.as2.aiff", as2, 127,127,127,121
+
